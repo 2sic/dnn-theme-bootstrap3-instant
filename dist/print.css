@@ -1,0 +1,7 @@
+@media print {
+  a[href]:after {
+    content: "" !important; }
+  .ly-nav-mobile-trigger {
+    display: none; } }
+
+/*# sourceMappingURL=print.css.map */

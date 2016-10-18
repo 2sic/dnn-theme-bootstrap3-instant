@@ -1,0 +1,14 @@
+{
+  "version": "0.1.0",
+  "command": "npm",
+  "windows": {
+    "command": "npm.cmd"
+  },
+  "tasks": [
+    {
+      // "npm run lint"
+      "taskName": "gulp",
+      "args": ["run"]
+    }
+  ]
+}

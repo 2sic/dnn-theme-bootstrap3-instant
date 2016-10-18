@@ -1,0 +1,19 @@
+{
+  "name": "2sic-standard-skin-template",
+  "version": "1.0.0",
+  "description": "The default skin template for 2sic websites",
+  "main": "(none)",
+  "scripts": {
+    "gulp": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "2sic internet solutions",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {},
+  "ToSIC-global-dependencies": {
+    "grunt-cli": "",
+    "gulp": "",
+    "gulp-sass": ""
+  }
+}

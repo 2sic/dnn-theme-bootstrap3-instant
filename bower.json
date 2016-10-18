@@ -1,0 +1,22 @@
+{
+  "name": "2sic-dnn-skin-bootstrap3-instant",
+  "description": "The default skin template for 2sic websites",
+  "main": "(none)",
+  "authors": [
+    "2sic internet solutions"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "sidr": "^2.2.1"
+  }
+}
