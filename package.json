@@ -4,15 +4,18 @@
   "description": "The default skin template for 2sic websites",
   "main": "(none)",
   "scripts": {
-    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "2sic internet solutions",
   "license": "ISC",
   "devDependencies": {},
   "dependencies": {},
+  // The ToSIC-global-dependencies node specifies dependencies that are needed
+  // to run the gulp tasks. They are not listed in the dependencies node itself
+  // because we at 2sic do not install those dependencies locally but globally.
+  // Move the dependencies to the "dependencies" node and run npm install to
+  // install gulp and the sass plugin.
   "ToSIC-global-dependencies": {
-    "grunt-cli": "",
     "gulp": "",
     "gulp-sass": ""
   }
