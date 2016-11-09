@@ -9,7 +9,7 @@ A clean, prepared bootstrap3 skin for DNN (DotNetNuke), ready to make awesomenes
 2. And it's awesome together with professional content-templates like
   1. [Standard Bootstrap3 Content Blocks/Templates](https://github.com/2sic/2sxc-content-bootstrap3)
 
-## Installation
+## Installation 
 ### Put it into Portals/\_default or /Portals/[your-portal]
 We recommend that you place this in your /Portals/\_default area, but you can also put it into your specific portal, like /Portals/0/.
 The following 2 examples assume you want to put it into \_default. 
