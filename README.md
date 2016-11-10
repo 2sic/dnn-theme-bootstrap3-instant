@@ -35,5 +35,13 @@ This will automatically get the latest copy of this skin/theme and place it in t
 
 You can now use the skin/theme wherever you want. 
 
+## Automatically Downloading Dependencies (Bootstrap, ...)
+
+In the main skin folder, just run
+
+```
+bower install
+```
+
 ## Customizing the Theme/Skin using SASS CSS
 TODO
