@@ -1,8 +1,7 @@
 # DNN Skin/Theme Bootstrap3 Instant!
 A clean, prepared bootstrap3 skin for DNN (DotNetNuke), ready to make awesomeness - ideally combined with bootstrap content-templates. 
 
-1. Ideally you will install this together with the _Invisible container_
-  1. [Invisible Container](https://github.com/2sic/dnn-container-invisible)
+1. Ideally you will install this together with the [Invisible Container](https://github.com/2sic/dnn-container-invisible)
 1. Also check out other DNN Bootstrap Skins like:
   2. [DNN Bootstrap3 Single Pager](https://github.com/2sic/dnn-theme-bootstrap3-single-pager)
   3. [DNN Bootster](http://www.dnnbootster.com/)
