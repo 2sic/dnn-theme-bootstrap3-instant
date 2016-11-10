@@ -10,6 +10,16 @@ A clean, prepared bootstrap3 skin for DNN (DotNetNuke), ready to make awesomenes
   1. [Standard Bootstrap3 Content Blocks/Templates](https://github.com/2sic/2sxc-content-bootstrap3)
 
 ## Installation 
+
+### DNN Extension Install
+You can install the skin as a DNN-Extension (but you don't have to). The net result is similar, but if you're not into git/npm/bower installs, then this is better. If you're versed with git, I would skip this. 
+
+1. Download the skin-extension package from the [latest release](https://github.com/2sic/dnn-theme-bootstrap3-instant/releases/latest)
+1. log into your dnn as host-user (so you can install extensions)
+1. go to **Host** > Extensions > Install...
+1. add the skin-package, upload, go through the dialogs...done
+1. the skin package works great with the [invisible container](https://github.com/2sic/dnn-container-invisible) which you should install as well
+
 ### Put it into Portals/\_default or /Portals/[your-portal]
 We recommend that you place this in your /Portals/\_default area, but you can also put it into your specific portal, like /Portals/0/.
 The following 2 examples assume you want to put it into \_default. 
@@ -38,10 +48,14 @@ You can now use the skin/theme wherever you want.
 ## Automatically Downloading Dependencies (Bootstrap, ...)
 
 In the main skin folder, just run
-
 ```
 bower install
 ```
+
+## Configuring a Site to Use this Skin by Default
+1. Go to the **Admin** > **Site Settings** > tab **Basic Settings** > Accordeon **Appearence**
+1. In the dropdown **Site Skin** choose this skin
+1. If you have downloaded the invisible container, also set that in the **Site Container**
 
 ## Customizing the Theme/Skin using SASS CSS
 TODO
