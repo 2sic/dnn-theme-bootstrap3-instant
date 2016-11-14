@@ -26,7 +26,7 @@
 
             <a href="#" class="ly-nav-mobile-trigger pull-left" title="Menu"></a>
             <nav id="nav-mobile">
-				<a href="#" class="ly-close"><%= LocalizeString("CloseNav.Text") %> <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
+				<a href="#" class="ly-close"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
                 <dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
             </nav>
 

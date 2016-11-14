@@ -90,19 +90,15 @@
 
 @media all {
   a.ly-close, a.ly-close:link, a.ly-close:visited {
-    color: #666;
+    color: #fff;
     text-decoration: none; }
   a.ly-close {
-    display: block;
-    padding: 3px 7px;
-    font-size: 11px;
-    text-align: right; }
+    position: absolute;
+    right: 15px;
+    top: 15px; }
   .ly-close span {
-    color: #3067b4;
-    margin-left: 2px;
-    font-size: 15px;
-    position: relative;
-    top: 4px; }
+    color: #fff;
+    font-size: 20px; }
   .sidr-open .ly-nav-mobile-trigger:after, .sidr-open .ly-nav-mobile-trigger:before {
     border-color: #3067b4; }
   /* SIDR Off-Canvas Menu Styling */
@@ -117,10 +113,9 @@
     width: 260px;
     overflow-x: hidden;
     overflow-y: auto;
-    background: #F8F8F8;
-    color: #333; }
+    background: #3067b4;
+    color: #fff; }
     .sidr .sidr-inner {
-      padding: 15px;
       overflow: hidden;
       position: relative; }
     .sidr.right {
@@ -135,6 +130,8 @@
   /* Region Mobile Navigation (in Sidr) */
   .ly-nav-mobile {
     margin: 15px 0;
+    margin-top: 50px;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
     font-size: 16px;
     /* mobilenavigation default styles for all levels */
     /* mobilenavigation level 1 */ }
@@ -148,41 +145,76 @@
         text-decoration: none;
         transition: color .4s; }
     .ly-nav-mobile > li {
-      border-bottom: 1px solid #3067b4;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
       /* mobilenavigation level 2 */ }
-      .ly-nav-mobile > li > a {
+      .ly-nav-mobile > li > .ly-linkwrapper > a {
         text-decoration: none;
-        padding-left: 0; }
-      .ly-nav-mobile > li.active > a, .ly-nav-mobile > li > a:hover {
-        color: #555555; }
+        display: block;
+        padding: 10px 15px 10px 16px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase; }
+      .ly-nav-mobile > li.active > .ly-linkwrapper > a, .ly-nav-mobile > li > .ly-linkwrapper > a:hover {
+        color: rgba(255, 255, 255, 0.5); }
+      .ly-nav-mobile > li.has-child.active {
+        border-bottom: none; }
       .ly-nav-mobile > li > ul {
-        margin-bottom: 15px; }
+        background-color: rgba(0, 0, 0, 0.4);
+        display: none; }
         .ly-nav-mobile > li > ul > li {
+          border-bottom: 1px solid #3067b4;
           margin: 0;
           /* mobilenavigation level 3 */ }
-          .ly-nav-mobile > li > ul > li > a {
-            color: #555555;
+          .ly-nav-mobile > li > ul > li.last {
+            border-bottom: none; }
+          .ly-nav-mobile > li > ul > li > .ly-linkwrapper > a {
+            color: #fff;
             display: block;
-            padding: 4px 10px 4px 20px;
-            font-size: 0.85em; }
-          .ly-nav-mobile > li > ul > li.active > a, .ly-nav-mobile > li > ul > li > a:hover {
+            padding: 10px 15px;
+            line-height: 1.3em; }
+          .ly-nav-mobile > li > ul > li.active > .ly-linkwrapper > a, .ly-nav-mobile > li > ul > li > .ly-linkwrapper > a:hover {
             color: #3067b4; }
           .ly-nav-mobile > li > ul > li > ul > li {
             /* mobilenavigation level 3 */ }
-            .ly-nav-mobile > li > ul > li > ul > li > a {
-              color: #555555;
+            .ly-nav-mobile > li > ul > li > ul > li > .ly-linkwrapper > a {
+              color: #fff;
               display: block;
               padding: 4px 10px 4px 40px;
               font-size: 0.85em; }
-            .ly-nav-mobile > li > ul > li > ul > li.active > a, .ly-nav-mobile > li > ul > li > ul > li > a:hover {
+            .ly-nav-mobile > li > ul > li > ul > li.active > .ly-linkwrapper > a, .ly-nav-mobile > li > ul > li > ul > li > .ly-linkwrapper > a:hover {
               color: #3067b4; }
-            .ly-nav-mobile > li > ul > li > ul > li > ul > li > a {
-              color: #555555;
+            .ly-nav-mobile > li > ul > li > ul > li > ul > li > .ly-linkwrapper > a {
+              color: #fff;
               display: block;
               padding: 4px 10px 4px 60px;
               font-size: 0.85em; }
-            .ly-nav-mobile > li > ul > li > ul > li > ul > li.active > a, .ly-nav-mobile > li > ul > li > ul > li > ul > li > a:hover {
+            .ly-nav-mobile > li > ul > li > ul > li > ul > li.active > .ly-linkwrapper > a, .ly-nav-mobile > li > ul > li > ul > li > ul > li > .ly-linkwrapper > a:hover {
               color: #3067b4; }
+    .ly-nav-mobile .ly-linkwrapper {
+      position: relative; }
+    .ly-nav-mobile .ly-navopener {
+      padding: 18px;
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.2);
+      position: absolute;
+      right: 0;
+      top: 0;
+      cursor: pointer; }
+      .ly-nav-mobile .ly-navopener .ly-navopener-icon {
+        border-top: 8px solid white;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        margin-top: -2px; }
+    .ly-nav-mobile ul .ly-navopener {
+      display: none; }
+    .ly-nav-mobile .ly-active > .ly-linkwrapper .ly-navopener .ly-navopener-icon {
+      border-top: none;
+      border-bottom: 8px solid white;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent; }
+    .ly-nav-mobile .ly-active > ul > li > ul {
+      padding-bottom: 15px; }
   /*#endregion*/
   /*#region Sub Navigation */
   .ly-nav-sub {
