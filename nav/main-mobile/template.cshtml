@@ -5,7 +5,7 @@
 
 @helper RenderNodes(IList<MenuNode> nodes) {
 	if (nodes.Count > 0) {
-		<ul class="@(nodes[0].Depth == 0 ? "nav nav-pills nav-stacked ly-nav ly-nav-mobile" : "")">
+		<ul class="@(nodes[0].Depth == 0 ? "ly-nav ly-nav-mobile" : "")">
 			@foreach (var node in nodes) {
 				var cssClasses = new List<string>();
 				cssClasses.Add("nav-" + node.TabId);
@@ -16,14 +16,19 @@
 				var classString = new HtmlString((cssClasses.Count == 0) ? "" : (" class=\"" + String.Join(" ", cssClasses.ToArray()) + "\""));
 				<li @classString>
 					@if (node.Enabled) {
-						<a target="@(node.Target)" href="@node.Url">@node.Text</a>
+						<div class="ly-linkwrapper">
+                            <a @(node.Target == "_new" ? "target=\"_blank\"" : "") href="@node.Url">@node.Text</a>
+                            @if (node.HasChildren())
+                            {
+                                <div class="ly-navopener">
+                                    <div class="ly-navopener-icon"></div>
+                                </div>
+                            }
+                        </div>
 					} else {
 						@node.Text
 					}
-                    @if(node.Breadcrumb)
-                    {
-					    @RenderNodes(node.Children)
-                    }
+                    @RenderNodes(node.Children)
 				</li>
 			}
 		</ul>

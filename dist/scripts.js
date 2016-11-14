@@ -9,8 +9,6 @@ $(function() {
 	/* Open all PDF links in a new window */
 	$("a[href$='.pdf']").attr('target', '_blank');
 
-
-
     /* SIDR Off-Canvas Menu */
 	$(".ly-nav-mobile-trigger").sidr({
 	    name: 'nav-main-offcanvas',
@@ -43,6 +41,17 @@ $(function() {
         e.preventDefault();
 	    $.sidr("close", "nav-main-offcanvas");
 	});
+
+	/* Mobile Navigation */
+    $('#nav-main-offcanvas .ly-navopener').click(function () {
+		console.log('hw');
+        $(this).parent().parent().toggleClass('ly-active').find('ul:first').slideToggle();
+    });
+
+    $('#nav-main-offcanvas li.active').each(function () {
+        $(this).find('ul:first').slideDown();
+        $(this).toggleClass('ly-active');
+    });
 
 
     /* Prevent "Overscroll" on iOS devices */

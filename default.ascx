@@ -8,6 +8,16 @@
 <%@ Register TagPrefix="tosic" TagName="BodyCssClasses" src="controls/body-css-classes.ascx" %>
 <tosic:BodyCssClasses runat="server" />
 
+<%--
+  Remove the comments below to enable 2sxc quick-edit on all pages when logged on (requires 2sxc to be installed)
+  more infos: https://2sxc.org/en/blog/post/quick-edit-2-add-move-delete-modules-in-preview-touch-capable-for-dnn
+--%>
+
+<%--
+<%@ Register tagprefix="Edit" tagname="QuickEdit" src="~/DesktopModules/ToSIC_SexyContent/DnnWebForms/Skins/QuickEdit.ascx" %>
+<Edit:QuickEdit runat="server" />
+--%>
+
 <a class="sr-only sr-only-focusable" href="#content"><%= LocalizeString("SkipLink.MainContent") %></a>
 
 <header>
@@ -16,7 +26,7 @@
 
             <a href="#" class="ly-nav-mobile-trigger pull-left" title="Menu"></a>
             <nav id="nav-mobile">
-				<a href="#" class="ly-close"><%= LocalizeString("CloseNav.Text") %> <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
+				<a href="#" class="ly-close"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
                 <dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
             </nav>
 
