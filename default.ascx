@@ -8,6 +8,16 @@
 <%@ Register TagPrefix="tosic" TagName="BodyCssClasses" src="controls/body-css-classes.ascx" %>
 <tosic:BodyCssClasses runat="server" />
 
+<%--
+  Remove the comments below to enable 2sxc quick-edit on all pages when logged on (requires 2sxc to be installed)
+  more infos: https://2sxc.org/en/blog/post/quick-edit-2-add-move-delete-modules-in-preview-touch-capable-for-dnn
+--%>
+
+<%--
+<%@ Register tagprefix="Edit" tagname="QuickEdit" src="~/DesktopModules/ToSIC_SexyContent/DnnWebForms/Skins/QuickEdit.ascx" %>
+<Edit:QuickEdit runat="server" />
+--%>
+
 <a class="sr-only sr-only-focusable" href="#content"><%= LocalizeString("SkipLink.MainContent") %></a>
 
 <header>
