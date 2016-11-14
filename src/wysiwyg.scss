@@ -1,6 +1,6 @@
 @import "_variables";
-@import "../lib/bootstrap-sass/assets/stylesheets/_bootstrap";
-@import "typography";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
+@import "typography"; 
 
 body {
 	padding:10px;
