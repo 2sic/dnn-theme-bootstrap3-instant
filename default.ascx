@@ -30,9 +30,15 @@
                 <dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
             </nav>
 
-		    <a class="ly-logo" href="/" title="Bootstrap Skin Template by 2sic">
-			    <img src="<%=SkinPath%>images/logo.png?w=340&amp;quality=100" alt="" />
-		    </a>
+			<a class="ly-logo" href="/" title="">			
+				<!--[if gte IE 9]><!-->
+				<img alt="" src="<%=SkinPath%>images/logo.svg" data-fallback="<%=SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
+				<!--<![endif]-->
+				<!--[if lt IE 9]>
+				<img alt="" src="<%=SkinPath%>images/logo.png" />
+				<![endif]-->
+			</a>
+
             <nav id="nav-desktop" class="navbar navbar-default hidden-xs hidden-sm">
 		        <dnn:MENU MenuStyle="nav/main" NodeSelector="*,0,0" runat="server" />
 	        </nav>
