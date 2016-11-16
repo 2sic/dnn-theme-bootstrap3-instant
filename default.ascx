@@ -19,64 +19,64 @@
 --%>
 
 <a class="sr-only sr-only-focusable" href="#content"><%= LocalizeString("SkipLink.MainContent") %></a>
+<div class="ly-fullwrapper">
+	<header>
+		<div class="container-fluid clearfix">
+			<div class="ly-container-inner">
 
-<header>
-    <div class="container-fluid clearfix">
-        <div class="ly-container-inner">
+				<a href="#" class="ly-nav-mobile-trigger pull-left" title="Menu"></a>
+				<nav id="nav-mobile">
+					<a href="#" class="ly-close"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
+					<dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
+				</nav>
 
-            <a href="#" class="ly-nav-mobile-trigger pull-left" title="Menu"></a>
-            <nav id="nav-mobile">
-				<a href="#" class="ly-close"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
-                <dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
-            </nav>
+				<a class="ly-logo" href="/" title="">			
+					<!--[if gte IE 9]><!-->
+					<img alt="" src="<%=SkinPath%>images/logo.svg" data-fallback="<%=SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
+					<!--<![endif]-->
+					<!--[if lt IE 9]>
+					<img alt="" src="<%=SkinPath%>images/logo.png" />
+					<![endif]-->
+				</a>
 
-			<a class="ly-logo" href="/" title="">			
-				<!--[if gte IE 9]><!-->
-				<img alt="" src="<%=SkinPath%>images/logo.svg" data-fallback="<%=SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
-				<!--<![endif]-->
-				<!--[if lt IE 9]>
-				<img alt="" src="<%=SkinPath%>images/logo.png" />
-				<![endif]-->
-			</a>
+				<nav id="nav-desktop" class="navbar navbar-default hidden-xs hidden-sm">
+					<dnn:MENU MenuStyle="nav/main" NodeSelector="*,0,0" runat="server" />
+				</nav>
 
-            <nav id="nav-desktop" class="navbar navbar-default hidden-xs hidden-sm">
-		        <dnn:MENU MenuStyle="nav/main" NodeSelector="*,0,0" runat="server" />
-	        </nav>
-
-        </div>
-    </div>
-</header>
-
-<div class="container-fluid ly-header-pane <%= (HeaderPane.Attributes["class"] ?? "").Contains("DNNEmptyPane") ? "ly-header-pane-empty" : "" %>">
-	<div class="ly-container-inner">
-		<div id="HeaderPane" runat="server" containertype="G" containername="Invisible Container" containersrc="default.ascx"></div>
-	</div>
-</div>
-
-<div id="content">
-    <div class="container-fluid ly-content">
-        <div class="ly-container-inner">
-			<div class="ly-contentpane-full">
-				<div id="ContentPane" runat="server" containertype="G" containername="Invisible Container" containersrc="default.ascx"></div>
 			</div>
-		    <div class="row">
-			    <div class="col-xs-12 col-md-9 col-md-push-3 ly-col-contentpane">
-                    <div id="RightPane" runat="server" containertype="G" containername="Invisible Container" containersrc="default.ascx"></div>
-			    </div>
-			    <div class="col-xs-12 col-md-3 col-md-pull-9 ly-col-leftpane">
-                    <div class="hidden-xs">
-                        <dnn:MENU MenuStyle="nav/sub" NodeSelector="+0,0,2" runat="server" />
-                    </div>
-                    <div class="visible-xs">
-                        <dnn:MENU MenuStyle="nav/sub" NodeSelector="CurrentChildren" runat="server" />
-                    </div>
-			    </div>
-		    </div>
-        </div>
-		<a class="ly-top" href="#" title="Nach oben"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a>
+		</div>
+	</header>
+
+	<div class="container-fluid ly-header-pane <%= (HeaderPane.Attributes["class"] ?? "").Contains("DNNEmptyPane") ? "ly-header-pane-empty" : "" %>">
+		<div class="ly-container-inner">
+			<div id="HeaderPane" runat="server" containertype="G" containername="Invisible Container" containersrc="default.ascx"></div>
+		</div>
+	</div>
+
+	<div id="content">
+		<div class="container-fluid ly-content">
+			<div class="ly-container-inner">
+				<div class="ly-contentpane-full">
+					<div id="ContentPane" runat="server" containertype="G" containername="Invisible Container" containersrc="default.ascx"></div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-9 col-md-push-3 ly-col-contentpane">
+						<div id="RightPane" runat="server" containertype="G" containername="Invisible Container" containersrc="default.ascx"></div>
+					</div>
+					<div class="col-xs-12 col-md-3 col-md-pull-9 ly-col-leftpane">
+						<div class="hidden-xs">
+							<dnn:MENU MenuStyle="nav/sub" NodeSelector="+0,0,2" runat="server" />
+						</div>
+						<div class="visible-xs">
+							<dnn:MENU MenuStyle="nav/sub" NodeSelector="CurrentChildren" runat="server" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="ly-top" href="#" title="Nach oben"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a>
+		</div>
 	</div>
 </div>
-	
 <footer>
     <div class="container-fluid">
         <div class="ly-container-inner clearfix">

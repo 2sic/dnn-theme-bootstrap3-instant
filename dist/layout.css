@@ -157,8 +157,6 @@
         text-transform: uppercase; }
       .ly-nav-mobile > li.active > .ly-linkwrapper > a, .ly-nav-mobile > li > .ly-linkwrapper > a:hover {
         color: rgba(255, 255, 255, 0.5); }
-      .ly-nav-mobile > li.has-child.active {
-        border-bottom: none; }
       .ly-nav-mobile > li > ul {
         background-color: rgba(0, 0, 0, 0.4);
         display: none; }
@@ -174,23 +172,34 @@
             padding: 10px 15px;
             line-height: 1.3em; }
           .ly-nav-mobile > li > ul > li.active > .ly-linkwrapper > a, .ly-nav-mobile > li > ul > li > .ly-linkwrapper > a:hover {
-            color: #3067b4; }
-          .ly-nav-mobile > li > ul > li > ul > li {
-            /* mobilenavigation level 3 */ }
-            .ly-nav-mobile > li > ul > li > ul > li > .ly-linkwrapper > a {
-              color: #fff;
-              display: block;
-              padding: 4px 10px 4px 40px;
-              font-size: 0.85em; }
-            .ly-nav-mobile > li > ul > li > ul > li.active > .ly-linkwrapper > a, .ly-nav-mobile > li > ul > li > ul > li > .ly-linkwrapper > a:hover {
-              color: #3067b4; }
-            .ly-nav-mobile > li > ul > li > ul > li > ul > li > .ly-linkwrapper > a {
-              color: #fff;
-              display: block;
-              padding: 4px 10px 4px 60px;
-              font-size: 0.85em; }
-            .ly-nav-mobile > li > ul > li > ul > li > ul > li.active > .ly-linkwrapper > a, .ly-nav-mobile > li > ul > li > ul > li > ul > li > .ly-linkwrapper > a:hover {
-              color: #3067b4; }
+            color: rgba(255, 255, 255, 0.5); }
+          .ly-nav-mobile > li > ul > li > ul {
+            padding-bottom: 15px; }
+            .ly-nav-mobile > li > ul > li > ul > li {
+              /* mobilenavigation level 3 */ }
+              .ly-nav-mobile > li > ul > li > ul > li > .ly-linkwrapper > a {
+                color: #fff;
+                display: block;
+                padding: 4px 10px 4px 40px;
+                font-size: 0.85em; }
+              .ly-nav-mobile > li > ul > li > ul > li.active > .ly-linkwrapper > a, .ly-nav-mobile > li > ul > li > ul > li > .ly-linkwrapper > a:hover {
+                color: rgba(255, 255, 255, 0.5); }
+              .ly-nav-mobile > li > ul > li > ul > li > ul > li {
+                /* mobilenavigation level 4+ */ }
+                .ly-nav-mobile > li > ul > li > ul > li > ul > li > .ly-linkwrapper > a {
+                  color: #fff;
+                  display: block;
+                  padding: 4px 10px 4px 60px;
+                  font-size: 0.85em; }
+                .ly-nav-mobile > li > ul > li > ul > li > ul > li.active > .ly-linkwrapper > a, .ly-nav-mobile > li > ul > li > ul > li > ul > li > .ly-linkwrapper > a:hover {
+                  color: rgba(255, 255, 255, 0.5); }
+                .ly-nav-mobile > li > ul > li > ul > li > ul > li ul li .ly-linkwrapper a {
+                  color: #fff;
+                  display: block;
+                  padding: 4px 10px 4px 80px;
+                  font-size: 0.85em; }
+                .ly-nav-mobile > li > ul > li > ul > li > ul > li ul li.active .ly-linkwrapper a, .ly-nav-mobile > li > ul > li > ul > li > ul > li ul li .ly-linkwrapper a:hover {
+                  color: rgba(255, 255, 255, 0.5); }
     .ly-nav-mobile .ly-linkwrapper {
       position: relative; }
     .ly-nav-mobile .ly-navopener {
@@ -213,8 +222,6 @@
       border-bottom: 8px solid white;
       border-left: 4px solid transparent;
       border-right: 4px solid transparent; }
-    .ly-nav-mobile .ly-active > ul > li > ul {
-      padding-bottom: 15px; }
   /*#endregion*/
   /*#region Sub Navigation */
   .ly-nav-sub {
@@ -384,6 +391,32 @@
 @media all {
     body.va-layout-wide #content .container-fluid.ly-content {
       position: relative; }
+  /*layout full*/
+  body.va-layout-full {
+    height: 100%;
+    /* Sticky Footer */ }
+    body.va-layout-full header {
+      box-shadow: 0 0 9px; }
+    body.va-layout-full .ly-header-pane {
+      background: #3067b4;
+      margin-top: 0;
+      width: 100%; }
+      body.va-layout-full .ly-header-pane.container-fluid {
+        max-width: 100%; }
+        body.va-layout-full .ly-header-pane.container-fluid .ly-container-inner {
+          max-width: 1920px; }
+    body.va-layout-full #content .container-fluid.ly-content {
+      position: relative; }
+    body.va-layout-full #content .container-fluid.ly-content {
+      background: transparent; }
+    body.va-layout-full footer {
+      background-color: #3067b4;
+      height: 52px; }
+    body.va-layout-full .ly-fullwrapper, body.va-layout-full #Form {
+      min-height: 100%;
+      height: 100%;
+      margin: 0 auto -52px;
+      /* the bottom margin is the negative value of the footer's height */ }
   /*layout box*/
   body.va-layout-box header {
     background: transparent; }
