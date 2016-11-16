@@ -516,6 +516,7 @@ $tosic-footer-color: #fff;
 	}
 	/*layout full*/
 	body.va-layout-full {
+		height: 100%;
 		header {
 			box-shadow: 0 0 9px;
 		}
@@ -539,8 +540,15 @@ $tosic-footer-color: #fff;
 			background: transparent;
 		}
 
+		/* Sticky Footer */
 		footer {
 			background-color: $tosic-footer-background;
+			height: 52px;
+		}
+		.ly-fullwrapper, #Form {
+			min-height: 100%;
+			height: 100%;
+			margin: 0 auto -52px; /* the bottom margin is the negative value of the footer's height */
 		}
 	}
 	/*layout box*/

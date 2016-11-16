@@ -392,22 +392,31 @@
     body.va-layout-wide #content .container-fluid.ly-content {
       position: relative; }
   /*layout full*/
-  body.va-layout-full header {
-    box-shadow: 0 0 9px; }
-  body.va-layout-full .ly-header-pane {
-    background: #3067b4;
-    margin-top: 0;
-    width: 100%; }
-    body.va-layout-full .ly-header-pane.container-fluid {
-      max-width: 100%; }
-      body.va-layout-full .ly-header-pane.container-fluid .ly-container-inner {
-        max-width: 1920px; }
-  body.va-layout-full #content .container-fluid.ly-content {
-    position: relative; }
-  body.va-layout-full #content .container-fluid.ly-content {
-    background: transparent; }
-  body.va-layout-full footer {
-    background-color: #3067b4; }
+  body.va-layout-full {
+    height: 100%;
+    /* Sticky Footer */ }
+    body.va-layout-full header {
+      box-shadow: 0 0 9px; }
+    body.va-layout-full .ly-header-pane {
+      background: #3067b4;
+      margin-top: 0;
+      width: 100%; }
+      body.va-layout-full .ly-header-pane.container-fluid {
+        max-width: 100%; }
+        body.va-layout-full .ly-header-pane.container-fluid .ly-container-inner {
+          max-width: 1920px; }
+    body.va-layout-full #content .container-fluid.ly-content {
+      position: relative; }
+    body.va-layout-full #content .container-fluid.ly-content {
+      background: transparent; }
+    body.va-layout-full footer {
+      background-color: #3067b4;
+      height: 52px; }
+    body.va-layout-full .ly-fullwrapper, body.va-layout-full #Form {
+      min-height: 100%;
+      height: 100%;
+      margin: 0 auto -52px;
+      /* the bottom margin is the negative value of the footer's height */ }
   /*layout box*/
   body.va-layout-box header {
     background: transparent; }
