@@ -516,9 +516,10 @@ $tosic-footer-color: #fff;
 	}
 	/*layout full*/
 	body.va-layout-full {
-		height: 100%;
 		header {
-			box-shadow: 0 0 9px;
+			box-shadow: 0 0 20px;
+			position: relative;
+			z-index: 5;
 		}
 		.ly-header-pane {
 			background: $brand-primary;
@@ -529,6 +530,7 @@ $tosic-footer-color: #fff;
 				max-width: 100%;
 				.ly-container-inner {
 					max-width: 1920px;
+					margin: 0 auto;
 				}
 			}
 		}		
@@ -541,14 +543,17 @@ $tosic-footer-color: #fff;
 		}
 
 		/* Sticky Footer */
+		height: 100%;
 		footer {
 			background-color: $tosic-footer-background;
 			height: 52px;
 		}
-		.ly-fullwrapper, #Form {
+		.ly-fullwrapper {
 			min-height: 100%;
-			height: 100%;
 			margin: 0 auto -52px; /* the bottom margin is the negative value of the footer's height */
+		}
+		#Form {
+			height: 100%;
 		}
 	}
 	/*layout box*/
