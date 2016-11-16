@@ -391,6 +391,23 @@
 @media all {
     body.va-layout-wide #content .container-fluid.ly-content {
       position: relative; }
+  /*layout full*/
+  body.va-layout-full header {
+    box-shadow: 0 0 9px; }
+  body.va-layout-full .ly-header-pane {
+    background: #3067b4;
+    margin-top: 0;
+    width: 100%; }
+    body.va-layout-full .ly-header-pane.container-fluid {
+      max-width: 100%; }
+      body.va-layout-full .ly-header-pane.container-fluid .ly-container-inner {
+        max-width: 1920px; }
+  body.va-layout-full #content .container-fluid.ly-content {
+    position: relative; }
+  body.va-layout-full #content .container-fluid.ly-content {
+    background: transparent; }
+  body.va-layout-full footer {
+    background-color: #3067b4; }
   /*layout box*/
   body.va-layout-box header {
     background: transparent; }

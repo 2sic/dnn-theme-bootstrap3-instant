@@ -514,6 +514,35 @@ $tosic-footer-color: #fff;
 			position: relative;
 		}
 	}
+	/*layout full*/
+	body.va-layout-full {
+		header {
+			box-shadow: 0 0 9px;
+		}
+		.ly-header-pane {
+			background: $brand-primary;
+			margin-top: 0;
+			width: 100%;
+
+			&.container-fluid {
+				max-width: 100%;
+				.ly-container-inner {
+					max-width: 1920px;
+				}
+			}
+		}		
+		#content .container-fluid.ly-content {
+			position: relative;
+		}
+
+		#content .container-fluid.ly-content {
+			background: transparent;
+		}
+
+		footer {
+			background-color: $tosic-footer-background;
+		}
+	}
 	/*layout box*/
 	body.va-layout-box {
 		header {
