@@ -18,6 +18,9 @@
 <Edit:QuickEdit runat="server" />
 --%>
 
+<%-- Include Google Font --%>
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700" rel="stylesheet">
+
 <a class="sr-only sr-only-focusable" href="#content"><%= LocalizeString("SkipLink.MainContent") %></a>
 <div class="ly-fullwrapper">
 	<header>
