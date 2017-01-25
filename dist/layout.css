@@ -1,5 +1,7 @@
 /* Custom 2sic variables */
 /* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
 @media all {
   /*#region Layout*/
   /* Layout padding cannot be set on .container-fluid because of IE8 bug with max-width, padding and box-sizing:border-box. */
@@ -19,7 +21,16 @@
       padding-right: 45px; } }
 
 @media all {
-  /*#endregion*/
+  #content .container-fluid.ly-content {
+    min-height: 370px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    background: #fff; }
+  /*#endregion*/ }
+
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+@media all {
   /*#region Header (and Main Navigation) */
   header {
     background: #fff; }
@@ -59,7 +70,11 @@
     border-color: #3067b4; }
   .ly-header-pane {
     padding: 0; }
-  /*#endregion*/
+  /*#endregion*/ }
+
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+@media all {
   /*#region Mobile Navigation */
   #nav-mobile {
     display: none; }
@@ -222,7 +237,9 @@
       border-bottom: 8px solid white;
       border-left: 4px solid transparent;
       border-right: 4px solid transparent; }
-  /*#endregion*/
+  /*#endregion*/ }
+
+@media all {
   /*#region Sub Navigation */
   .ly-nav-sub {
     margin: 15px 0;
@@ -273,76 +290,13 @@
       border-top: 1px solid; } }
 
 @media all {
-  /*#endregion*/
-  /*#region Content */
-  #content .container-fluid.ly-content {
-    min-height: 370px;
-    padding-top: 30px;
-    padding-bottom: 60px;
-    background: #fff; }
-  /*#endregion*/
-  /*#region Footer */
-  footer {
-    color: #fff; }
-    footer, footer p, footer .Normal, footer li p {
-      font-size: 14px; }
-    footer .container-fluid {
-      background: #3067b4;
-      position: relative;
-      padding-top: 15px;
-      padding-bottom: 15px; }
-    footer a, footer a:visited, footer a:hover, footer a:link {
-      text-decoration: none;
-      color: #fff; }
-  .ly-footer-address {
-    float: left;
-    list-style-type: none;
-    margin: 0;
-    padding: 0; }
-    .ly-footer-address li {
-      float: left;
-      margin-right: 10px; }
-  .ly-footer-imprint {
-    float: right; } }
+  /*#endregion*/ }
 
-@media all and (max-width: 767px) {
-  .ly-footer-imprint {
-    float: none;
-    clear: left; } }
-
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
 @media all {
-  a.ly-top {
-    position: fixed;
-    bottom: 30px;
-    right: 7px;
-    font-size: 35px;
-    opacity: 0;
-    z-index: 100;
-    color: #222222;
-    transition: opacity 0.5s;
-    pointer-events: none; } }
-  @media all and (min-width: 768px) {
-    a.ly-top {
-      display: none !important; } }
-
-@media all {
-  .ly-top.ly-top-visible {
-    opacity: .72;
-    pointer-events: auto; }
-  /* Default layout styles */
-  #ToFlexCopyright, #ToFlexCopyright a, #ToFlexCopyright a:link, #ToFlexCopyright a:visited {
-    color: #777777;
-    font-size: 10px; }
-  a.ly-login, a.ly-login:link, a.ly-login:visited {
-    color: #3067b4;
-    font-size: 10px; }
-  a.ly-login:hover {
-    color: #fff; }
-  #ControlBar_ControlPanel #ServiceImg {
-    display: none; }
-  /*#endregion */
-  /*#region layout variants*/
-  /******************/
   /*layout default*/ }
 
 @media all and (min-width: 1200px) {
@@ -352,7 +306,25 @@
 @media all {
   body.va-layout-default .ly-header-pane-empty {
     background: #3067b4;
-    height: 45px; }
+    height: 45px; } }
+
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+@media all {
+  /*layout box*/
+  body.va-layout-box header {
+    background: transparent; }
+    body.va-layout-box header .container-fluid {
+      background: #fff; }
+  body.va-layout-box .ly-header-pane {
+    margin-top: 0;
+    background: #fff; }
+  body.va-layout-box .ly-header-pane-empty {
+    border-top: 5px solid #3067b4; } }
+
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+@media all {
   /*layout wide*/
   body.va-layout-wide {
     background-color: #fff; }
@@ -390,7 +362,11 @@
 
 @media all {
     body.va-layout-wide #content .container-fluid.ly-content {
-      position: relative; }
+      position: relative; } }
+
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+@media all {
   /*layout full*/
   body.va-layout-full {
     /* Sticky Footer */
@@ -420,17 +396,9 @@
       margin: 0 auto -52px;
       /* the bottom margin is the negative value of the footer's height */ }
     body.va-layout-full #Form {
-      height: 100%; }
-  /*layout box*/
-  body.va-layout-box header {
-    background: transparent; }
-    body.va-layout-box header .container-fluid {
-      background: #fff; }
-  body.va-layout-box .ly-header-pane {
-    margin-top: 0;
-    background: #fff; }
-  body.va-layout-box .ly-header-pane-empty {
-    border-top: 5px solid #3067b4; }
+      height: 100%; } }
+
+@media all {
   /* Logo left */
   body.va-mainnav-left .ly-logo {
     float: right; }
@@ -469,5 +437,69 @@
   body.va-layout-default.va-header-center .ly-header-pane {
     margin-top: 0; }
   /*#endregion*/ }
+
+@media all {
+  /*#region Footer */
+  footer {
+    color: #fff; }
+    footer, footer p, footer .Normal, footer li p {
+      font-size: 14px; }
+    footer .container-fluid {
+      background: #3067b4;
+      position: relative;
+      padding-top: 15px;
+      padding-bottom: 15px; }
+    footer a, footer a:visited, footer a:hover, footer a:link {
+      text-decoration: none;
+      color: #fff; }
+  .ly-footer-address {
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    .ly-footer-address li {
+      float: left;
+      margin-right: 10px; }
+  .ly-footer-imprint {
+    float: right; } }
+
+@media all and (max-width: 767px) {
+  .ly-footer-imprint {
+    float: none;
+    clear: left; } }
+
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+@media all {
+  #ToFlexCopyright, #ToFlexCopyright a, #ToFlexCopyright a:link, #ToFlexCopyright a:visited {
+    color: #777777;
+    font-size: 10px; }
+  a.ly-login, a.ly-login:link, a.ly-login:visited {
+    color: #3067b4;
+    font-size: 10px; }
+  a.ly-login:hover {
+    color: #fff; }
+  #ControlBar_ControlPanel #ServiceImg {
+    display: none; } }
+
+@media all {
+  a.ly-top {
+    position: fixed;
+    bottom: 30px;
+    right: 7px;
+    font-size: 35px;
+    opacity: 0;
+    z-index: 100;
+    color: #222222;
+    transition: opacity 0.5s;
+    pointer-events: none; } }
+  @media all and (min-width: 768px) {
+    a.ly-top {
+      display: none !important; } }
+
+@media all {
+  .ly-top.ly-top-visible {
+    opacity: .72;
+    pointer-events: auto; } }
 
 /*# sourceMappingURL=layout.css.map */
