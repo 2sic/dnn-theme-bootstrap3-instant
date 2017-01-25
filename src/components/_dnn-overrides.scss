@@ -1,0 +1,9 @@
+@import "variables";
+@import "../variables-2sic";
+
+@media all {
+	#ToFlexCopyright, #ToFlexCopyright a, #ToFlexCopyright a:link, #ToFlexCopyright a:visited { color:$gray-light; font-size:10px; }
+	a.ly-login, a.ly-login:link, a.ly-login:visited { color:$tosic-footer-background; font-size:10px; }
+	a.ly-login:hover { color:$tosic-footer-color; }
+	#ControlBar_ControlPanel #ServiceImg { display:none; }
+}

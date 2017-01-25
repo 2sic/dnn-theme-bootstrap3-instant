@@ -1,0 +1,35 @@
+@import "variables";
+@import "../variables-2sic";
+
+@media all {	
+    /*#region Layout*/
+    /* Layout padding cannot be set on .container-fluid because of IE8 bug with max-width, padding and box-sizing:border-box. */
+	html { 
+		height:100%;
+	}
+	body { 
+		overflow-y: scroll;
+		min-height:100%;
+		height: auto;
+	}
+    .container-fluid {
+		max-width:1200px;
+		padding-left: $grid-gutter-width/2;
+		padding-right: $grid-gutter-width/2;
+		@media(min-width: $screen-sm-min){
+			padding-left: $grid-gutter-width*1.5;
+			padding-right: $grid-gutter-width*1.5;
+		}
+	}
+	
+	#content {
+		.container-fluid.ly-content { 
+			min-height:370px;
+			padding-top: $grid-gutter-width;
+			padding-bottom: $grid-gutter-width*2;
+			background: #fff;
+		}
+	}
+	
+	/*#endregion*/
+}

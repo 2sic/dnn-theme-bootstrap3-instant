@@ -1,0 +1,67 @@
+@import "variables";
+@import "../variables-2sic";
+
+@media all {
+	/*#region Header (and Main Navigation) */
+	header { 
+		background: $tosic-header-background;
+		
+		.container-fluid { 
+			padding-top:20px;
+			padding-bottom:20px;
+		}
+	} 
+	
+    .ly-logo {
+		display: block;
+		width:170px;
+		max-width:100%;
+		height: auto;
+        img {
+            width:170px;
+            max-width:100%;
+			height: auto;
+        }
+    }
+
+    #nav-desktop {
+        margin: 3px 0 0 0;
+		float: right;
+    }
+
+	/* Reset for all Navigations */
+	.ly-nav { 
+		&, ul, li {
+			margin: 0;
+			padding: 0;
+		}
+	}
+	
+    /* Main Navigation */
+    .ly-nav-main {
+        li {
+            a {
+                text-decoration:none;
+                border-radius:5px;
+                font-family:$headings-font-family;
+                font-size:18px;
+				color: $brand-primary;
+                margin:0 0 0 5px;
+                padding:5px 15px;
+                border-width:0;
+                border-color:transparent;
+                border-style:solid;
+				transition: background-color .5s;
+            }
+            &.active a {
+                border-color:$brand-primary;
+            }
+        }
+    }
+
+    .ly-header-pane { 
+		padding:0;
+	}
+
+    /*#endregion*/
+}

@@ -1,0 +1,38 @@
+@media all {
+    /*#region Footer */
+    footer {
+		&, p, .Normal, li p {
+			font-size: $font-size-small;
+		}
+		.container-fluid { 
+			background:$tosic-footer-background;
+			position:relative;
+			padding-top:$grid-gutter-width/2;
+			padding-bottom: $grid-gutter-width/2;
+		}
+		a, a:visited, a:hover, a:link {
+			text-decoration: none;
+			color:$tosic-footer-color;
+		}
+		color:$tosic-footer-color;
+	}
+
+    .ly-footer-address {
+        
+        float:left;
+        list-style-type:none;
+        margin:0;
+		padding: 0;
+
+        li { float:left; margin-right:10px; }
+		
+    }
+    .ly-footer-imprint {
+        float:right;
+    }
+    .ly-footer-address, .ly-footer-imprint {  }
+    @media (max-width: $screen-xs-max) {
+        .ly-footer-imprint { float:none; clear:left; }
+    }
+	
+}
