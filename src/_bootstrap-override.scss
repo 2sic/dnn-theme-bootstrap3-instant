@@ -1,22 +1,6 @@
 ﻿@import "_variables";
 
-/* 2sic Bootstrap overrides */
-a.btn-primary.btn-primary {
-	&:link, &:visited, &:hover {
-		color: #fff;
-	}
-}
-a.btn.btn {
-	&:link, &:visited, &:hover {
-		text-decoration: none;
-	}
-}
 
 
 
-/* 2sic Fancybox overrides */
-.fancybox-skin.fancybox-skin {
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0;
-}
+
