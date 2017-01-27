@@ -1,16 +1,9 @@
 @import "variables";
-@import "variables-2sic";
-
-@import "components/base-layout";
-@import "components/header";
-@import "components/nav-mobile";
-@import "components/nav-sub";
-@import "components/layouts";
-@import "components/footer";
-@import "components/dnn-overrides";
+@import "../variables-2sic";
 
 @media all {
-	a.ly-top {
+
+    a.ly-top {
 		position: fixed;
 		bottom: 30px;
 		right: 7px;
@@ -28,6 +21,4 @@
 		opacity: .72;
 		pointer-events: auto;
 	}
-
-    
 }
