@@ -109,11 +109,6 @@
 </footer>
 
 <!-- include files in head -->
-<%--<dnn:DnnCssInclude runat="server" FilePath="dist/bootstrap.css" Priority="100" PathNameAlias="SkinPath" />
-<dnn:DnnCssInclude runat="server" FilePath="dist/typography.css" Priority="120" PathNameAlias="SkinPath" />
-<dnn:DnnCssInclude runat="server" FilePath="dist/contactform.css" Priority="125" PathNameAlias="SkinPath" />
-<dnn:DnnCssInclude runat="server" FilePath="dist/layout.css" Priority="130" PathNameAlias="SkinPath" />
-<dnn:DnnCssInclude runat="server" FilePath="dist/print.css" Priority="140" PathNameAlias="SkinPath" />--%>
 <dnn:DnnCssInclude runat="server" FilePath="dist/full-package.css" Priority="100" PathNameAlias="SkinPath" />
 <dnn:DnnCssInclude runat="server" FilePath="~/Portals/_default/Skins/_default/ToEasyDNN.css" Priority="150" />
 
