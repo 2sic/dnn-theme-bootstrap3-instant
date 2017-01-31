@@ -1,0 +1,53 @@
+@import "variables";
+@import "../variables-2sic";
+
+@media all {
+	
+	/* Logo left */
+	body.va-mainnav-left {
+		.ly-logo { float: right; }
+		#nav-desktop { float: left; }
+	}
+	/* Logo right */
+	body.va-mainnav-right {
+		.ly-logo { float: left; }
+		#nav-desktop { float: right; }
+	}
+	/* header centered */
+	body.va-mainnav-center {
+		.ly-logo {
+			display: block;
+			margin: 0 auto;
+			text-align: center;
+		}
+		#nav-desktop {
+			float: none;
+			margin: $grid-gutter-width 0 ($grid-gutter-width/2) 0;
+			text-align: center;
+			
+			.navbar-nav {
+				float: none;
+				li {
+					display: inline-block;
+					float: none;
+				}
+			}
+		}
+		.ly-contentpane-full {
+			.co-content-text-only {
+				@media(min-width: $screen-md-min){
+					width: 90%;
+				}
+			}
+		}
+		.co-navigation {
+			text-align: center;
+		}
+	}
+	/* special combine rules */
+	body.va-layout-default.va-header-center {
+		header { background: $gray-lighter; }
+		.ly-header-pane { margin-top: 0; }
+	}
+	/*#endregion*/
+}

@@ -5821,42 +5821,4 @@ a.btn-primary.btn-primary:link, a.btn-primary.btn-primary:visited, a.btn-primary
 a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
   text-decoration: none; }
 
-/* 2sic Fancybox overrides */
-.fancybox-skin.fancybox-skin {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0; }
-
-/*#region DNN Overrides and default styles (do not change) */
-/* box-sizing Fixes for DNN components, 3dr party plugins, modules */
-#ControlBar_ControlPanel * {
-  box-sizing: content-box; }
-
-#ControlBar_ControlPanel .mark {
-  background-color: transparent;
-  padding: 0; }
-
-#ControlNav > li > a {
-  text-decoration: none; }
-
-.actionMenu * {
-  box-sizing: content-box; }
-
-.dnnCheckbox .mark {
-  padding: 0;
-  background: none; }
-
-.ui-dialog {
-  color: black;
-  font-family: Arial, sans-serif; }
-
-.dnnFormPopup {
-  top: 50px !important; }
-
-ul, ol {
-  margin: 0;
-  padding: 0; }
-
-/*#endregion*/
-
 /*# sourceMappingURL=bootstrap.css.map */

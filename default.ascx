@@ -18,6 +18,9 @@
 <Edit:QuickEdit runat="server" />
 --%>
 
+<%-- Include Google Font --%>
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700" rel="stylesheet">
+
 <a class="sr-only sr-only-focusable" href="#content"><%= LocalizeString("SkipLink.MainContent") %></a>
 <div class="ly-fullwrapper">
 	<header>
@@ -106,11 +109,7 @@
 </footer>
 
 <!-- include files in head -->
-<dnn:DnnCssInclude runat="server" FilePath="dist/bootstrap.css" Priority="100" PathNameAlias="SkinPath" />
-<dnn:DnnCssInclude runat="server" FilePath="dist/typography.css" Priority="120" PathNameAlias="SkinPath" />
-<dnn:DnnCssInclude runat="server" FilePath="dist/contactform.css" Priority="125" PathNameAlias="SkinPath" />
-<dnn:DnnCssInclude runat="server" FilePath="dist/layout.css" Priority="130" PathNameAlias="SkinPath" />
-<dnn:DnnCssInclude runat="server" FilePath="dist/print.css" Priority="140" PathNameAlias="SkinPath" />
+<dnn:DnnCssInclude runat="server" FilePath="dist/full-package.css" Priority="100" PathNameAlias="SkinPath" />
 <dnn:DnnCssInclude runat="server" FilePath="~/Portals/_default/Skins/_default/ToEasyDNN.css" Priority="150" />
 
 <dnn:DnnJsInclude runat="server" FilePath="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js" ForceProvider="DnnFormBottomProvider" Priority="100" PathNameAlias="SkinPath" />

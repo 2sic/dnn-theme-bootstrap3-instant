@@ -1,0 +1,22 @@
+@import "variables";
+@import "../variables-2sic";
+
+@media all {
+	
+	/*layout box*/
+	body.va-layout-box {
+		header {
+			background: transparent;
+			.container-fluid {
+				background: $tosic-header-background;
+			}
+		}
+		.ly-header-pane {
+			margin-top: 0;
+			background: #fff;
+		}
+		.ly-header-pane-empty {
+			border-top: 5px solid $brand-primary;
+		}
+	}
+}

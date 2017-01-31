@@ -1,11 +1,12 @@
 @charset "UTF-8";
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
 /*!
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url(https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -239,8 +240,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../lib/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("../lib/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../lib/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../lib/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../lib/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../lib/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+  src: url("../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 
 .glyphicon {
   position: relative;
@@ -1077,7 +1078,6 @@ a {
     color: #050b13;
     text-decoration: underline; }
   a:focus {
-    outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
 
@@ -2293,7 +2293,6 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
@@ -2807,7 +2806,6 @@ select[multiple].input-lg,
   -ms-user-select: none;
   user-select: none; }
   .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
-    outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   .btn:hover, .btn:focus, .btn.focus {
@@ -5818,6 +5816,13 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+/* 2sic Bootstrap overrides */
+a.btn-primary.btn-primary:link, a.btn-primary.btn-primary:visited, a.btn-primary.btn-primary:hover {
+  color: #fff; }
+
+a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
+  text-decoration: none; }
+
 @media all {
   body, p, .Normal, li p {
     font-size: 16px;
@@ -5879,7 +5884,545 @@ button.close {
   .ly-margin-bottom {
     margin-bottom: 22px; } }
 
-body {
-  padding: 10px; }
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+@media all {
+  /*#region Layout*/
+  /* Layout padding cannot be set on .container-fluid because of IE8 bug with max-width, padding and box-sizing:border-box. */
+  html {
+    height: 100%; }
+  body {
+    overflow-y: scroll;
+    min-height: 100%;
+    height: auto; }
+  .container-fluid {
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px; } }
+  @media all and (min-width: 768px) {
+    .container-fluid {
+      padding-left: 45px;
+      padding-right: 45px; } }
 
-/*# sourceMappingURL=wysiwyg.css.map */
+@media all {
+  #content .container-fluid.ly-content {
+    min-height: 370px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    background: #fff; }
+  /*#endregion*/ }
+
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+@media all {
+  /*#region Header (and Main Navigation) */
+  header {
+    background: #fff; }
+    header .container-fluid {
+      padding-top: 20px;
+      padding-bottom: 20px; }
+  .ly-logo {
+    display: block;
+    width: 170px;
+    max-width: 100%;
+    height: auto; }
+    .ly-logo img {
+      width: 170px;
+      max-width: 100%;
+      height: auto; }
+  .ly-header-pane {
+    padding: 0; }
+  /*#endregion*/ }
+
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+@media all {
+  #nav-desktop {
+    margin: 3px 0 0 0;
+    float: right; }
+  /* Reset for all Navigations */
+  .ly-nav, .ly-nav ul, .ly-nav li {
+    margin: 0;
+    padding: 0; }
+  /* Main Navigation */
+  .ly-nav-main li a {
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 18px;
+    color: #3067b4;
+    margin: 0 0 0 5px;
+    padding: 5px 15px;
+    border-width: 0;
+    border-color: transparent;
+    border-style: solid;
+    transition: background-color .5s; }
+  .ly-nav-main li.active a {
+    border-color: #3067b4; } }
+
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+@media all {
+  /*#region Mobile Navigation */
+  #nav-mobile {
+    display: none; }
+  .ly-nav-mobile-trigger {
+    display: block;
+    margin: -7px 10px 0 -10px;
+    padding: 10px;
+    outline: none !important; }
+    .ly-nav-mobile-trigger:after {
+      border-bottom: 3px solid #3067b4;
+      border-top: 3px solid #3067b4;
+      text-indent: -9999px;
+      display: block;
+      content: ' ';
+      width: 29px;
+      height: 17px; }
+    .ly-nav-mobile-trigger:before {
+      border-bottom: 3px solid #3067b4;
+      text-indent: -9999px;
+      display: block;
+      content: ' ';
+      width: 29px;
+      height: 10px;
+      position: absolute; } }
+  @media all and (min-width: 992px) {
+    .ly-nav-mobile-trigger {
+      display: none; } }
+
+@media all {
+  a.ly-close, a.ly-close:link, a.ly-close:visited {
+    color: #fff;
+    text-decoration: none; }
+  a.ly-close {
+    position: absolute;
+    right: 15px;
+    top: 15px; }
+  .ly-close span {
+    color: #fff;
+    font-size: 20px; }
+  .sidr-open .ly-nav-mobile-trigger:after, .sidr-open .ly-nav-mobile-trigger:before {
+    border-color: #3067b4; }
+  /* SIDR Off-Canvas Menu Styling */
+  .ly-disablescroll {
+    overflow: hidden; }
+  .sidr {
+    display: block;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 999999;
+    width: 260px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #3067b4;
+    color: #fff; }
+    .sidr .sidr-inner {
+      overflow: hidden;
+      position: relative; }
+    .sidr.right {
+      left: auto;
+      right: -280px; }
+    .sidr.left {
+      left: -280px;
+      right: auto; }
+  .ly-disablescroll .sidr {
+    box-shadow: 15px 0 50px rgba(0, 0, 0, 0.55); }
+  /*#endregion*/
+  /* Region Mobile Navigation (in Sidr) */
+  .ly-nav-mobile {
+    margin: 15px 0;
+    margin-top: 50px;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    font-size: 16px;
+    /* mobilenavigation default styles for all levels */
+    /* mobilenavigation level 1 */ }
+    .ly-nav-mobile, .ly-nav-mobile ul {
+      margin-left: 0;
+      padding: 0;
+      list-style-type: none; }
+    .ly-nav-mobile li {
+      list-style-type: none; }
+      .ly-nav-mobile li a {
+        text-decoration: none;
+        transition: color .4s; }
+    .ly-nav-mobile > li {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      /* mobilenavigation level 2 */ }
+      .ly-nav-mobile > li > .ly-linkwrapper > a {
+        text-decoration: none;
+        display: block;
+        padding: 10px 15px 10px 16px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase; }
+      .ly-nav-mobile > li.active > .ly-linkwrapper > a, .ly-nav-mobile > li > .ly-linkwrapper > a:hover {
+        color: rgba(255, 255, 255, 0.5); }
+      .ly-nav-mobile > li > ul {
+        background-color: rgba(0, 0, 0, 0.4);
+        display: none; }
+        .ly-nav-mobile > li > ul > li {
+          border-bottom: 1px solid #3067b4;
+          margin: 0;
+          /* mobilenavigation level 3 */ }
+          .ly-nav-mobile > li > ul > li.last {
+            border-bottom: none; }
+          .ly-nav-mobile > li > ul > li > .ly-linkwrapper > a {
+            color: #fff;
+            display: block;
+            padding: 10px 15px;
+            line-height: 1.3em; }
+          .ly-nav-mobile > li > ul > li.active > .ly-linkwrapper > a, .ly-nav-mobile > li > ul > li > .ly-linkwrapper > a:hover {
+            color: rgba(255, 255, 255, 0.5); }
+          .ly-nav-mobile > li > ul > li > ul {
+            padding-bottom: 15px; }
+            .ly-nav-mobile > li > ul > li > ul > li {
+              /* mobilenavigation level 3 */ }
+              .ly-nav-mobile > li > ul > li > ul > li > .ly-linkwrapper > a {
+                color: #fff;
+                display: block;
+                padding: 4px 10px 4px 40px;
+                font-size: 0.85em; }
+              .ly-nav-mobile > li > ul > li > ul > li.active > .ly-linkwrapper > a, .ly-nav-mobile > li > ul > li > ul > li > .ly-linkwrapper > a:hover {
+                color: rgba(255, 255, 255, 0.5); }
+              .ly-nav-mobile > li > ul > li > ul > li > ul > li {
+                /* mobilenavigation level 4+ */ }
+                .ly-nav-mobile > li > ul > li > ul > li > ul > li > .ly-linkwrapper > a {
+                  color: #fff;
+                  display: block;
+                  padding: 4px 10px 4px 60px;
+                  font-size: 0.85em; }
+                .ly-nav-mobile > li > ul > li > ul > li > ul > li.active > .ly-linkwrapper > a, .ly-nav-mobile > li > ul > li > ul > li > ul > li > .ly-linkwrapper > a:hover {
+                  color: rgba(255, 255, 255, 0.5); }
+                .ly-nav-mobile > li > ul > li > ul > li > ul > li ul li .ly-linkwrapper a {
+                  color: #fff;
+                  display: block;
+                  padding: 4px 10px 4px 80px;
+                  font-size: 0.85em; }
+                .ly-nav-mobile > li > ul > li > ul > li > ul > li ul li.active .ly-linkwrapper a, .ly-nav-mobile > li > ul > li > ul > li > ul > li ul li .ly-linkwrapper a:hover {
+                  color: rgba(255, 255, 255, 0.5); }
+    .ly-nav-mobile .ly-linkwrapper {
+      position: relative; }
+    .ly-nav-mobile .ly-navopener {
+      padding: 18px;
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.2);
+      position: absolute;
+      right: 0;
+      top: 0;
+      cursor: pointer; }
+      .ly-nav-mobile .ly-navopener .ly-navopener-icon {
+        border-top: 8px solid white;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        margin-top: -2px; }
+    .ly-nav-mobile ul .ly-navopener {
+      display: none; }
+    .ly-nav-mobile .ly-active > .ly-linkwrapper .ly-navopener .ly-navopener-icon {
+      border-top: none;
+      border-bottom: 8px solid white;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent; }
+  /*#endregion*/ }
+
+@media all {
+  /*#region Sub Navigation */
+  .ly-nav-sub {
+    margin: 15px 0;
+    font-size: 16px;
+    /* subnavigation default styles for all levels */
+    /* subnavigation level 1 */ }
+    .ly-nav-sub, .ly-nav-sub ul {
+      margin-left: 0;
+      padding: 0;
+      list-style-type: none; }
+    .ly-nav-sub li {
+      list-style-type: none; }
+      .ly-nav-sub li a {
+        text-decoration: none;
+        transition: color .4s; }
+    .ly-nav-sub > li {
+      margin-top: 0;
+      border-bottom: 1px solid #3067b4;
+      /* subnavigation level 2 */ }
+      .ly-nav-sub > li > a {
+        text-transform: uppercase;
+        padding-left: 0; }
+      .ly-nav-sub > li.active > a, .ly-nav-sub > li a:hover {
+        color: #050b13; }
+      .ly-nav-sub > li > ul {
+        margin-bottom: 15px; }
+        .ly-nav-sub > li > ul > li {
+          margin: 0;
+          /* subnavigation level 3 */ }
+          .ly-nav-sub > li > ul > li > a {
+            color: #555555;
+            display: block;
+            padding: 4px 10px 4px 20px;
+            font-size: 0.85em; }
+          .ly-nav-sub > li > ul > li.active > a, .ly-nav-sub > li > ul > li a:hover {
+            color: #3067b4; }
+          .ly-nav-sub > li > ul > li > ul > li {
+            margin: 0; }
+            .ly-nav-sub > li > ul > li > ul > li > a {
+              color: #555555;
+              display: block;
+              padding: 4px 10px 4px 40px;
+              font-size: 0.85em; }
+            .ly-nav-sub > li > ul > li > ul > li.active > a, .ly-nav-sub > li > ul > li > ul > li a:hover {
+              color: #3067b4; } }
+  @media all and (max-width: 1199px) {
+    .ly-nav-sub {
+      border-top: 1px solid; } }
+
+@media all {
+  /*#endregion*/ }
+
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+@media all {
+  a.ly-top {
+    position: fixed;
+    bottom: 30px;
+    right: 7px;
+    font-size: 35px;
+    opacity: 0;
+    z-index: 100;
+    color: #222222;
+    transition: opacity 0.5s;
+    pointer-events: none; } }
+  @media all and (min-width: 768px) {
+    a.ly-top {
+      display: none !important; } }
+
+@media all {
+  .ly-top.ly-top-visible {
+    opacity: .72;
+    pointer-events: auto; } }
+
+@media all {
+  /* 2sic Fancybox overrides */
+  .fancybox-skin.fancybox-skin {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; } }
+
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+@media all {
+  /*layout default*/ }
+
+@media all and (min-width: 1200px) {
+  body.va-layout-default .ly-header-pane {
+    margin-top: 60px; } }
+
+@media all {
+  body.va-layout-default .ly-header-pane-empty {
+    background: #3067b4;
+    height: 45px; } }
+
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+@media all {
+  /*layout box*/
+  body.va-layout-box header {
+    background: transparent; }
+    body.va-layout-box header .container-fluid {
+      background: #fff; }
+  body.va-layout-box .ly-header-pane {
+    margin-top: 0;
+    background: #fff; }
+  body.va-layout-box .ly-header-pane-empty {
+    border-top: 5px solid #3067b4; } }
+
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+@media all {
+  /*layout wide*/
+  body.va-layout-wide {
+    background-color: #fff; }
+    body.va-layout-wide .ly-header-pane {
+      margin-top: 0;
+      /* only one module in headerpane -> bugs in dnn-sortable (moving modules in panes with drag and drop) */ } }
+    @media all and (min-width: 1450px) {
+      body.va-layout-wide .ly-header-pane {
+        margin-bottom: -405px;
+        min-height: 515px; } }
+    @media all and (min-width: 1450px) {
+      body.va-layout-wide .ly-header-pane .ly-container-inner {
+        margin-left: -100px;
+        margin-right: -100px; } }
+    @media all and (min-width: 1650px) {
+      body.va-layout-wide .ly-header-pane .ly-container-inner {
+        margin-left: -200px;
+        margin-right: -200px; } }
+
+@media all {
+      body.va-layout-wide .ly-header-pane:not(.ly-header-pane-empty) .dnnSortable {
+        min-height: 0 !important;
+        height: 0; } }
+  @media all and (min-width: 1450px) {
+    body.va-layout-wide.tab-home .ly-header-pane {
+      margin-bottom: -100px; } }
+
+@media all {
+    body.va-layout-wide .ly-header-pane-empty .ly-container-inner {
+      background: #3067b4;
+      padding-bottom: 9%; } }
+    @media all and (min-width: 1450px) {
+      body.va-layout-wide .ly-header-pane-empty .ly-container-inner {
+        padding-bottom: 20%; } }
+
+@media all {
+    body.va-layout-wide #content .container-fluid.ly-content {
+      position: relative; } }
+
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+@media all {
+  /*layout full*/
+  body.va-layout-full {
+    /* Sticky Footer */
+    height: 100%; }
+    body.va-layout-full header {
+      box-shadow: 0 0 20px;
+      position: relative;
+      z-index: 5; }
+    body.va-layout-full .ly-header-pane {
+      background: #3067b4;
+      margin-top: 0;
+      width: 100%; }
+      body.va-layout-full .ly-header-pane.container-fluid {
+        max-width: 100%; }
+        body.va-layout-full .ly-header-pane.container-fluid .ly-container-inner {
+          max-width: 1920px;
+          margin: 0 auto; }
+    body.va-layout-full #content .container-fluid.ly-content {
+      position: relative; }
+    body.va-layout-full #content .container-fluid.ly-content {
+      background: transparent; }
+    body.va-layout-full footer {
+      background-color: #3067b4;
+      height: 52px; }
+    body.va-layout-full .ly-fullwrapper {
+      min-height: 100%;
+      margin: 0 auto -52px;
+      /* the bottom margin is the negative value of the footer's height */ }
+    body.va-layout-full #Form {
+      height: 100%; } }
+
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+@media all {
+  /* Logo left */
+  body.va-mainnav-left .ly-logo {
+    float: right; }
+  body.va-mainnav-left #nav-desktop {
+    float: left; }
+  /* Logo right */
+  body.va-mainnav-right .ly-logo {
+    float: left; }
+  body.va-mainnav-right #nav-desktop {
+    float: right; }
+  /* header centered */
+  body.va-mainnav-center .ly-logo {
+    display: block;
+    margin: 0 auto;
+    text-align: center; }
+  body.va-mainnav-center #nav-desktop {
+    float: none;
+    margin: 30px 0 15px 0;
+    text-align: center; }
+    body.va-mainnav-center #nav-desktop .navbar-nav {
+      float: none; }
+      body.va-mainnav-center #nav-desktop .navbar-nav li {
+        display: inline-block;
+        float: none; } }
+
+@media all and (min-width: 992px) {
+  body.va-mainnav-center .ly-contentpane-full .co-content-text-only {
+    width: 90%; } }
+
+@media all {
+  body.va-mainnav-center .co-navigation {
+    text-align: center; }
+  /* special combine rules */
+  body.va-layout-default.va-header-center header {
+    background: #eeeeee; }
+  body.va-layout-default.va-header-center .ly-header-pane {
+    margin-top: 0; }
+  /*#endregion*/ }
+
+@media all {
+  /*#region Footer */
+  footer {
+    color: #fff; }
+    footer, footer p, footer .Normal, footer li p {
+      font-size: 14px; }
+    footer .container-fluid {
+      background: #3067b4;
+      position: relative;
+      padding-top: 15px;
+      padding-bottom: 15px; }
+    footer a, footer a:visited, footer a:hover, footer a:link {
+      text-decoration: none;
+      color: #fff; }
+  .ly-footer-address {
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    .ly-footer-address li {
+      float: left;
+      margin-right: 10px; }
+  .ly-footer-imprint {
+    float: right; } }
+
+@media all and (max-width: 767px) {
+  .ly-footer-imprint {
+    float: none;
+    clear: left; } }
+
+/* Custom 2sic variables */
+/* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+@media all {
+  /*#region DNN Overrides and default styles (do not change) */
+  /* box-sizing Fixes for DNN components, 3dr party plugins, modules */
+  #ControlBar_ControlPanel * {
+    box-sizing: content-box; }
+  #ControlBar_ControlPanel .mark {
+    background-color: transparent;
+    padding: 0; }
+  #ControlNav > li > a {
+    text-decoration: none; }
+  .actionMenu * {
+    box-sizing: content-box; }
+  .dnnCheckbox .mark {
+    padding: 0;
+    background: none; }
+  .ui-dialog {
+    color: black;
+    font-family: Arial, sans-serif; }
+  .dnnFormPopup {
+    top: 50px !important; }
+  ul, ol {
+    margin: 0;
+    padding: 0; }
+  /*#endregion*/
+  a.ly-login, a.ly-login:link, a.ly-login:visited {
+    color: #3067b4;
+    font-size: 10px; }
+  a.ly-login:hover {
+    color: #fff; }
+  #ControlBar_ControlPanel #ServiceImg {
+    display: none; } }
+
+@media print {
+  a[href]:after {
+    content: "" !important; }
+  .ly-nav-mobile-trigger {
+    display: none; } }
+
+/*# sourceMappingURL=full-package.css.map */

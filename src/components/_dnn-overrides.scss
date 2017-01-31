@@ -1,0 +1,31 @@
+@import "variables";
+@import "../variables-2sic";
+
+@media all {
+
+	/*#region DNN Overrides and default styles (do not change) */	
+	/* box-sizing Fixes for DNN components, 3dr party plugins, modules */
+	#ControlBar_ControlPanel * { box-sizing:content-box; }
+	#ControlBar_ControlPanel .mark { background-color: transparent; padding: 0; }
+	#ControlNav > li > a { text-decoration: none; }
+	.actionMenu * { box-sizing:content-box; }
+	.dnnCheckbox .mark { padding:0; background:none; }
+	.ui-dialog { color:black; font-family:Arial, sans-serif;}
+	.dnnFormPopup { top: 50px!important; }
+	ul, ol {
+		margin: 0;
+		padding: 0;
+	}
+	/*#endregion*/
+
+	a.ly-login, a.ly-login:link, a.ly-login:visited {
+		color:$tosic-footer-background;
+		font-size:10px;
+	}
+	a.ly-login:hover {
+		color:$tosic-footer-color;
+	}
+	#ControlBar_ControlPanel #ServiceImg {
+		display:none;
+	}
+}

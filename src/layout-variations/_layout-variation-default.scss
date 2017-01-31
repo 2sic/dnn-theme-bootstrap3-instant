@@ -1,0 +1,17 @@
+@import "variables";
+@import "../variables-2sic";
+
+@media all { 
+	/*layout default*/
+	body.va-layout-default {
+		.ly-header-pane {
+			@media(min-width: $screen-lg-min){
+				margin-top: $grid-gutter-width*2;
+			}
+		}
+		.ly-header-pane-empty {
+			background: $brand-primary;
+			height: $grid-gutter-width*1.5;
+		}
+	}
+}

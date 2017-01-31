@@ -1,0 +1,213 @@
+@import "variables";
+@import "../variables-2sic";
+
+@media all {	
+    /*#region Mobile Navigation */
+    #nav-mobile { display:none; }
+    .ly-nav-mobile-trigger {
+        display:block;
+        margin:-7px 10px 0 -10px;
+        padding:10px;
+        outline:none!important;
+        
+        &:after {
+            border-bottom: 3px solid $brand-primary;
+			border-top: 3px solid $brand-primary;
+			text-indent: -9999px;
+			display: block;
+			content: ' ';
+			width: 29px;
+			height: 17px;
+        }
+		&:before {
+			border-bottom: 3px solid $brand-primary;
+			text-indent: -9999px;
+			display: block;
+			content: ' ';
+			width: 29px;
+			height: 10px;
+			position: absolute;
+		}
+
+        @media (min-width: $screen-md-min) { display:none; }
+    }
+	
+	a.ly-close, a.ly-close:link, a.ly-close:visited {
+		color: #fff;
+		text-decoration: none;
+	}
+	a.ly-close{
+		position: absolute;
+		right: 15px;
+		top: 15px;
+	}
+	.ly-close span{
+		color: #fff;
+		font-size: 20px;
+	}
+	
+    .sidr-open .ly-nav-mobile-trigger:after, .sidr-open .ly-nav-mobile-trigger:before { border-color:$brand-primary; }
+
+    /* SIDR Off-Canvas Menu Styling */
+	.ly-disablescroll { overflow:hidden; }
+    .sidr {
+        display: block;
+        position: fixed;
+        top: 0;
+        height: 100%;
+        z-index: 999999;
+        width: 260px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background: $brand-primary;
+        color: #fff;
+
+        .sidr-inner { overflow: hidden; position: relative; }
+        &.right{ left:auto; right:-280px; }
+        &.left{ left:-280px; right:auto; }
+    }
+	.ly-disablescroll .sidr { box-shadow: 15px 0 50px rgba(0,0,0,.55); }
+
+    /*#endregion*/
+	
+	/* Region Mobile Navigation (in Sidr) */
+    .ly-nav-mobile {
+        margin:($grid-gutter-width / 2) 0;
+		margin-top: 50px;
+		border-top: 1px solid rgba(0, 0, 0, 0.4);
+        font-size:$font-size-base;
+		&, ul {
+			margin-left: 0;
+			padding: 0;
+			list-style-type:none;
+		}
+		
+		/* mobilenavigation default styles for all levels */
+		li {
+			list-style-type:none;
+			a {
+				text-decoration: none;
+				transition: color .4s;
+			}
+		}
+		
+		/* mobilenavigation level 1 */
+		> li {
+			border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+			> .ly-linkwrapper > a {
+				text-decoration: none;
+				display: block;
+    			padding: 10px 15px 10px 16px;
+				color:#fff;
+				font-size: 18px;
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+			&.active > .ly-linkwrapper > a, > .ly-linkwrapper > a:hover {
+				color:rgba(255,255,255,.5);
+			}
+			
+			/* mobilenavigation level 2 */
+			> ul {
+				background-color: rgba(0, 0, 0, 0.4);
+				display: none;
+				> li {
+					border-bottom:1px solid $brand-primary;
+					&.last {
+						border-bottom: none;
+					}
+					margin:0;
+					> .ly-linkwrapper > a {
+						color:#fff;
+						display:block;
+						padding: 10px 15px;
+						line-height: 1.3em;
+					}
+					&.active > .ly-linkwrapper > a, > .ly-linkwrapper > a:hover {
+						color:rgba(255,255,255,.5);
+					}
+					
+					/* mobilenavigation level 3 */
+					> ul {
+						padding-bottom: $grid-gutter-width / 2;
+						> li {
+							> .ly-linkwrapper > a {
+								color:#fff;
+								display:block;
+								padding:4px 10px 4px 40px;
+								font-size:0.85em;
+							}
+							&.active > .ly-linkwrapper > a, > .ly-linkwrapper > a:hover {
+								color:rgba(255,255,255,.5);
+							}
+							
+							/* mobilenavigation level 3 */
+							> ul {
+								> li {
+									> .ly-linkwrapper > a {
+										color:#fff;
+										display:block;
+										padding:4px 10px 4px 60px;
+										font-size:0.85em;
+									}
+									&.active > .ly-linkwrapper > a, > .ly-linkwrapper > a:hover {
+										color:rgba(255,255,255,.5);
+									}
+
+									/* mobilenavigation level 4+ */
+									ul {
+										li {
+											.ly-linkwrapper a {
+												color:#fff;
+												display:block;
+												padding:4px 10px 4px 80px;
+												font-size:0.85em;
+											}
+											&.active .ly-linkwrapper a, .ly-linkwrapper a:hover {
+												color:rgba(255,255,255,.5);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.ly-linkwrapper {
+			position: relative;
+		}
+
+		.ly-navopener {
+			padding: 18px;
+			display: inline-block;
+			background: rgba(0, 0, 0, 0.2);
+			position: absolute;
+			right: 0;
+			top: 0;
+			cursor: pointer;
+
+			.ly-navopener-icon {
+				border-top: 8px solid rgba(255,255,255,1.0);
+				border-left: 4px solid transparent;
+				border-right: 4px solid transparent;
+				margin-top: -2px;
+			}
+		}
+
+		ul .ly-navopener {
+			display: none;
+		}
+
+		.ly-active > .ly-linkwrapper .ly-navopener .ly-navopener-icon {
+			border-top: none;
+			border-bottom: 8px solid rgba(255,255,255, 1.0);
+			border-left: 4px solid transparent;
+			border-right: 4px solid transparent;
+		}
+	}
+
+    /*#endregion*/
+}

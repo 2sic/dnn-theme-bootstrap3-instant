@@ -1,0 +1,32 @@
+@import "variables";
+@import "../variables-2sic";
+
+@media all {
+	/*#region Header (and Main Navigation) */
+	header { 
+		background: $tosic-header-background;
+		
+		.container-fluid { 
+			padding-top:20px;
+			padding-bottom:20px;
+		}
+	} 
+	
+    .ly-logo {
+		display: block;
+		width:170px;
+		max-width:100%;
+		height: auto;
+        img {
+            width:170px;
+            max-width:100%;
+			height: auto;
+        }
+    }
+
+    .ly-header-pane { 
+		padding:0;
+	}
+
+    /*#endregion*/
+}
