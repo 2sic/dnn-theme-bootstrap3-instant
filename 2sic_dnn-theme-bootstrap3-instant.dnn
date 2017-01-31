@@ -1,5 +1,5 @@
 ﻿<dotnetnuke type="Package" version="5.0">
-  <packages><package name="dnn-theme-bootstrap3-instant" type="Skin" version="2.15.0">
+  <packages><package name="dnn-theme-bootstrap3-instant" type="Skin" version="2.16.0">
   <friendlyName>DNN Skin/Theme Bootstrap3 Instant</friendlyName>
   <description>A clean, prepared bootstrap3 skin for DNN (DotNetNuke), ready to make awesomeness - ideally combined with bootstrap content-templates.</description>
   <iconFile />
@@ -1067,27 +1067,11 @@ SOFTWARE.
         </skinFile>
         <skinFile>
           <path>dist</path>
-          <name>contactform.css</name>
+          <name>full-package.css</name>
         </skinFile>
         <skinFile>
           <path>dist</path>
-          <name>contactform.css.map</name>
-        </skinFile>
-        <skinFile>
-          <path>dist</path>
-          <name>layout.css</name>
-        </skinFile>
-        <skinFile>
-          <path>dist</path>
-          <name>layout.css.map</name>
-        </skinFile>
-        <skinFile>
-          <path>dist</path>
-          <name>print.css</name>
-        </skinFile>
-        <skinFile>
-          <path>dist</path>
-          <name>print.css.map</name>
+          <name>full-package.css.map</name>
         </skinFile>
         <skinFile>
           <path>dist</path>
@@ -1102,18 +1086,14 @@ SOFTWARE.
           <name>typography.css.map</name>
         </skinFile>
         <skinFile>
-          <path>dist</path>
-          <name>wysiwyg.css</name>
-        </skinFile>
-        <skinFile>
-          <path>dist</path>
-          <name>wysiwyg.css.map</name>
-        </skinFile>
-        <skinFile>
           <path>images</path>
           <name>logo.png</name>
         </skinFile>
         <skinFile>
+          <path>images</path>
+          <name>logo.svg</name>
+        </skinFile>
+        <skinFile>
           <path>nav\blank</path>
           <name>menudef.xml</name>
         </skinFile>
@@ -1144,6 +1124,74 @@ SOFTWARE.
         <skinFile>
           <path>nav\sub</path>
           <name>template.cshtml</name>
+        </skinFile>
+        <skinFile>
+          <path>src\components\optional</path>
+          <name>_form-dnncentric.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\components</path>
+          <name>_base-layout.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\components</path>
+          <name>_dnn-overrides.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\components</path>
+          <name>_fancybox.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\components</path>
+          <name>_footer.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\components</path>
+          <name>_header.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\components</path>
+          <name>_nav-inpage.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\components</path>
+          <name>_nav-main.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\components</path>
+          <name>_nav-mobile.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\components</path>
+          <name>_nav-sub.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\components</path>
+          <name>_print.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\components</path>
+          <name>_typography.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\layout-variations</path>
+          <name>_layout-header-variations.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\layout-variations</path>
+          <name>_layout-variation-box.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\layout-variations</path>
+          <name>_layout-variation-default.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\layout-variations</path>
+          <name>_layout-variation-full.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\layout-variations</path>
+          <name>_layout-variation-wide.scss</name>
         </skinFile>
         <skinFile>
           <path>src</path>
@@ -1151,15 +1199,7 @@ SOFTWARE.
         </skinFile>
         <skinFile>
           <path>src</path>
-          <name>contactform.scss</name>
-        </skinFile>
-        <skinFile>
-          <path>src</path>
-          <name>layout.scss</name>
-        </skinFile>
-        <skinFile>
-          <path>src</path>
-          <name>print.scss</name>
+          <name>full-package.scss</name>
         </skinFile>
         <skinFile>
           <path>src</path>
@@ -1171,11 +1211,11 @@ SOFTWARE.
         </skinFile>
         <skinFile>
           <path>src</path>
-          <name>wysiwyg.scss</name>
+          <name>_bootstrap-override.scss</name>
         </skinFile>
         <skinFile>
           <path>src</path>
-          <name>_bootstrap-override.scss</name>
+          <name>_variables-2sic.scss</name>
         </skinFile>
         <skinFile>
           <path>src</path>
