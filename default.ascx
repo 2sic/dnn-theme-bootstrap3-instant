@@ -97,7 +97,7 @@
 				</li>
                 <li><span class="glyphicon glyphicon-phone"></span>&nbsp;<a href="tel:+41817506777">+41 81 750 67 77</a></li>
 				<li>
-					<span class="glyphicon glyphicon-envelope"></span>&nbsp;<span data-madr1="info" data-madr2="immotrend" data-madr3="com"></span>
+					<span class="glyphicon glyphicon-envelope"></span>&nbsp;<span data-madr1="info" data-madr2="immotrend" data-madr3="com" data-linktext="info@immotrend.com"></span>
 				</li>
             </ul>
             <div class="ly-footer-imprint">
