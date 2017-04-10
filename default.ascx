@@ -18,6 +18,9 @@
 <Edit:QuickEdit runat="server" />
 --%>
 
+<%@ Register TagPrefix="tosic" TagName="SxcQuickEdit" src="controls/2sxc-quickedit.ascx" %>
+<tosic:SxcQuickEdit runat="server" />
+
 <%-- Include Google Font --%>
 <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700" rel="stylesheet">
 
