@@ -71,7 +71,7 @@ $(function() {
 	    }
 	});
 	
-		/* mailencrypting */
+	/* mailencrypting */
 	setTimeout(function(){
 		$('[data-madr1]').not('.madr-done').each(function(){
 			$this = $(this);
