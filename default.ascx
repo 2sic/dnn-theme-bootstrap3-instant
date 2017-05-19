@@ -33,9 +33,9 @@
 					<dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
 				</nav>
 
-				<a class="ly-logo" href="/" title="">			
+				<a class="ly-logo" href="/" title="Bootstrap 3 Instant">			
 					<!--[if gte IE 9]><!-->
-					<img alt="" src="<%=SkinPath%>images/logo.svg" data-fallback="<%=SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
+					<img alt="Logo" src="<%=SkinPath%>images/logo.svg" data-fallback="<%=SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
 					<!--<![endif]-->
 					<!--[if lt IE 9]>
 					<img alt="" src="<%=SkinPath%>images/logo.png" />
