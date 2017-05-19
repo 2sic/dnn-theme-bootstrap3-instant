@@ -5910,6 +5910,8 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
     padding-top: 30px;
     padding-bottom: 60px;
     background: #fff; }
+  .ly-welcome-text {
+    text-align: center; }
   /*#endregion*/ }
 
 /* Custom 2sic variables */
@@ -6317,7 +6319,9 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
       margin: 0 auto -52px;
       /* the bottom margin is the negative value of the footer's height */ }
     body.va-layout-full #Form {
-      height: 100%; } }
+      height: 100%; }
+    body.va-layout-full .ly-fullwrapper .ly-push {
+      height: 52px; } }
 
 /* Custom 2sic variables */
 /* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
