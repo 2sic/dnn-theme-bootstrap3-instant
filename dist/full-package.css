@@ -5912,6 +5912,8 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
     background: #fff; }
   .ly-welcome-text {
     text-align: center; }
+    .ly-welcome-text > a {
+      text-decoration: underline; }
   /*#endregion*/ }
 
 /* Custom 2sic variables */

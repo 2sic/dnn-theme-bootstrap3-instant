@@ -31,6 +31,12 @@
 		}
 	}
 	
-	.ly-welcome-text { text-align: center; }
+	.ly-welcome-text {
+		text-align: center;
+
+		> a {
+			 text-decoration: underline; 
+		}
+	}
 	/*#endregion*/
 }
