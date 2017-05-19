@@ -9,6 +9,11 @@
 <tosic:BodyCssClasses runat="server" />
 
 <%--
+  This is the Bootstrap3 Instant Theme for DNN. Read the Wiki for further instructions.
+  Wiki: https://github.com/2sic/dnn-theme-bootstrap3-instant/wiki
+--%>
+
+<%--
   more infos on 2sxc quick-edit: https://2sxc.org/en/blog/post/quick-edit-2-add-move-delete-modules-in-preview-touch-capable-for-dnn
 --%>
 <%@ Register tagprefix="Edit" tagname="QuickEdit" src="~/DesktopModules/ToSIC_SexyContent/DnnWebForms/Skins/QuickEdit.ascx" %>
