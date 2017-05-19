@@ -43,16 +43,16 @@
       margin-bottom: 2px; }
   a, a:visited {
     text-decoration: none;
-    color: #3067b4; }
+    color: #5C4483; }
   a:hover {
-    color: #050b13;
+    color: black;
     text-decoration: underline; }
   .co-link {
-    color: #3067b4;
+    color: #5C4483;
     text-decoration: none; }
     .co-link:hover {
       text-decoration: underline;
-      color: #050b13; }
+      color: black; }
   .co-p {
     margin: 0 0 11px; }
   /* use this class for templates should have space to the bottom */

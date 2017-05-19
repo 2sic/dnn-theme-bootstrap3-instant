@@ -88,19 +88,19 @@
         <div class="ly-container-inner clearfix">
             <ul class="ly-footer-address clearfix" itemscope itemtype="http://schema.org/LocalBusiness">
 				<li>
-					<strong itemprop="name">IMMO trend AG</strong>
+					<strong itemprop="name">Bootstrap 3 Instant</strong>
 				</li>
 				<li>
 					<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-						<span itemprop="streetAddress">Standardstrasse 77</span>,
-						<span itemprop="postalCode">9470</span>
-						<span itemprop="addressLocality">Buchs</span>,
-						<span itemprop="addressCountry">Schweiz</span>
+						<span itemprop="streetAddress">Instant Road 77</span>,
+						<span itemprop="postalCode">50355</span>
+						<span itemprop="addressLocality">Instant City</span>,
+						<span itemprop="addressCountry">Instant Country</span>
 					</span>
 				</li>
                 <li><span class="glyphicon glyphicon-phone"></span>&nbsp;<a href="tel:+41817506777">+41 81 750 67 77</a></li>
 				<li>
-					<span class="glyphicon glyphicon-envelope"></span>&nbsp;<span data-madr1="info" data-madr2="immotrend" data-madr3="com" data-linktext="info@immotrend.com"></span>
+					<span class="glyphicon glyphicon-envelope"></span>&nbsp;<span data-madr1="instant" data-madr2="example" data-madr3="com" data-linktext="instant@example.com"></span>
 				</li>
             </ul>
             <div class="ly-footer-imprint">
