@@ -19,7 +19,6 @@ This theme is a layout/skin for the CMS [DNN](https://github.com/dnnsoftware/Dnn
 1. A clean, best-practices, responsive Bootstrap 3 Skin / Theme
 1. ...based on SASS, with a set of variables-files to customize layouts in minutes
 1. An e-mail encryptor to encrypt mail addresses in the layout
-1. A box-height synchronizer
 1. A SEO-title optimizer
 1. An automatic svg/png integration for responsive logos
 1. Layout footer implementing SEO microformats
