@@ -18,5 +18,7 @@
 		.ly-header-pane-empty {
 			border-top: 5px solid $brand-primary;
 		}
+
+		.ly-fullwrapper .ly-push { display: none; }
 	}
 }

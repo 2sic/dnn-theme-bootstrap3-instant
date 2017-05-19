@@ -9,11 +9,6 @@
 <tosic:BodyCssClasses runat="server" />
 
 <%--
-  This is the Bootstrap3 Instant Theme for DNN. Read the Wiki for further instructions.
-  Wiki: https://github.com/2sic/dnn-theme-bootstrap3-instant/wiki
---%>
-
-<%--
   more infos on 2sxc quick-edit: https://2sxc.org/en/blog/post/quick-edit-2-add-move-delete-modules-in-preview-touch-capable-for-dnn
 --%>
 <%@ Register tagprefix="Edit" tagname="QuickEdit" src="~/DesktopModules/ToSIC_SexyContent/DnnWebForms/Skins/QuickEdit.ascx" %>
@@ -63,6 +58,11 @@
 
 	<div id="content">
 		<div class="container-fluid ly-content">
+
+		<p class="ly-welcome-text">
+			This is the Bootstrap3 Instant Theme for DNN. Read the <a href="https://github.com/2sic/dnn-theme-bootstrap3-instant/wiki">Wiki</a> for further instructions.
+		</p>
+
 			<div class="ly-container-inner">
 				<div class="ly-contentpane-full">
 					<div id="ContentPane" runat="server" containertype="G" containername="Invisible Container" containersrc="default.ascx"></div>
@@ -84,6 +84,7 @@
 			<a class="ly-top" href="#" title="Nach oben"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a>
 		</div>
 	</div>
+	<div class="ly-push"></div>
 </div>
 <footer>
     <div class="container-fluid">

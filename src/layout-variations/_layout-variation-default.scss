@@ -13,5 +13,7 @@
 			background: $brand-primary;
 			height: $grid-gutter-width*1.5;
 		}
+	
+		.ly-fullwrapper .ly-push { display: none; }
 	}
 }
