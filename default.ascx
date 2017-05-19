@@ -33,7 +33,7 @@
 					<dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
 				</nav>
 
-				<a class="ly-logo" href="/" title="Bootstrap 3 Instant">			
+				<a class="ly-logo" href="/" title="Bootstrap 3 Instant (change this in the default.ascx)">			
 					<!--[if gte IE 9]><!-->
 					<img alt="Logo" src="<%=SkinPath%>images/logo.svg" data-fallback="<%=SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
 					<!--<![endif]-->

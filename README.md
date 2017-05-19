@@ -1,3 +1,5 @@
+<img width="100%" src="https://github.com/2sic/dnn-theme-bootstrap3-instant/wiki/assets/b3i-logo.png">
+
 # DNN Skin/Theme Bootstrap3 Instant!
 A clean, prepared bootstrap3 skin for DNN (DotNetNuke), ready to make awesomeness - ideally combined with bootstrap content-templates. 
 
@@ -8,52 +10,38 @@ A clean, prepared bootstrap3 skin for DNN (DotNetNuke), ready to make awesomenes
 2. And it's awesome together with professional content-templates like
   1. [Standard Bootstrap3 Content Blocks/Templates](https://github.com/2sic/2sxc-content-bootstrap3)
 
-## Installation
 
-### Decision: Put in Shared Area or Only This Portal
-We recommend that you place this in your shared `/Portals/\_default` area, but you can also put it into your specific portal, like `/Portals/0/`. The following 2 examples assume you want to put it into \_default. 
+# The Bootstrap3 Instant Theme for DNN
 
-### Option 1: DNN Extension Install
-You can install the skin as a DNN-Extension (but you don't have to). The net result is similar, but if you're not into git/npm/bower installs, then this is better. If you're versed with git, I would skip this. 
+This theme is a layout/skin for the CMS [DNN](https://github.com/dnnsoftware/Dnn.Platform) based on [Bootstrap3 ](http://getbootstrap.com/) and [SASS](http://sass-lang.com/). It allows you to create simple custom designs within minutes and complex designs within a few hours. This is why it's called *instant*. 
 
-1. Download the skin-extension package from the [latest release](https://github.com/2sic/dnn-theme-bootstrap3-instant/releases/latest)
-1. log into your dnn as host-user (so you can install extensions)
-1. go to _either_ **Host** (shared) _or_ **Admin** (this portal only) > **Extensions** > **Install Extension Wizard**
-1. add the skin-package, upload, go through the dialogs...done
-1. the skin package works great with the [invisible container](https://github.com/2sic/dnn-container-invisible) which you should install as well
+## What's in the Package
+1. A clean, best-practices, responsive Bootstrap 3 Skin / Theme
+1. ...based on SASS, with a set of variables-files to customize layouts in minutes
+1. An e-mail encryptor to encrypt mail addresses in the layout
+1. A box-height synchronizer
+1. A SEO-title optimizer
+1. An automatic svg/png integration for responsive logos
+1. Layout footer implementing SEO microformats
+1. Bower configuration for all dependencies
+1. Gulp to process the sass into the resulting CSS
 
-### Option 2: Quick-Install Using Git Command
-This assumes that you already have git installed on your pc and that you kind of have an idea what git is :)
+## Theme Installation
+There are three ways to install the initial package
 
-1. In your file explorer, go to `/Portals/_default/` (shared) or `/Portals/[your-portal-id]` (this portal only), then shift-right-click on the `Skins` folder and choose _Open Command Window Here_. You should now have a command-line on that folder. 
-2. Run this command (and rename `InstantB3` to whatever you want): 
-```
-git clone https://github.com/2sic/dnn-theme-bootstrap3-instant "InstantB3"
-```
+1. By downloading the _package_ and installing it through the web UI of DNN
+2. By using `git clone` to create a copy of this repository in your _Skins_ folder
+3. By downloading the zip and manually copying it to the _Skins_ folder
 
-This will get the latest copy of this skin/theme and place it in the right folder. You can now use it in any layout you want. 
+You can read more about this under [Installation](installation).
 
-### Option 3: Installing using Windows File Explorer
+## Customize and Redesign everything within Minutes
+You can now quickly customize and redesign everything within minutes. Check out the instructions on how to [Customize and Redesign](customize-and-redesign) everything. 
 
-1. In your file explorer, go to `/Portals/_default/Skins/` (or `/Portals/[your-portal-id]/Skins/` for single-portal install
-2. Create a new folder, call it `InstantB3` or whatever you want to call this skin. You should now have  
-`/Portals/_default/Skins/InstantB3/`
-3. all files from [this package](https://github.com/2sic/dnn-theme-bootstrap3-instant/archive/master.zip) into that folder. You should now have  
-`/Portals/_default/Skins/InstantB3/` with lots of files/folders
+## Creating Awesome Designed Content
+You now have created the layout within minutes or hours, but you're still missing the perfectly designed inner pieces, like tile-lists, content-accordeons, galleries, sliders, blogs and more. Fortunately these are both super-easy to add and use the same mechanisms for design. They can even re-use the variables of your skin, to automatically match look and feel :)
 
-You can now use the skin/theme wherever you want. 
+To get the awesome designed content, install [2sxc] and the default bootstrap3 content-templates. You can then change the SCSS in the content-templates to also point to the `_variables.scss` of this skin, and re-generate all styles for an amazingly fast development workflow.
 
-## Automatically Downloading Dependencies (Bootstrap, ...)
-
-In the main skin folder, just run
-```
-bower install
-```
-
-## Configuring a Site to Use this Skin by Default
-1. Go to the **Admin** > **Site Settings** > tab **Basic Settings** > Accordeon **Appearence**
-1. In the dropdown **Site Skin** choose this skin
-1. If you have downloaded the invisible container, also set that in the **Site Container**
-
-## Customizing the Theme/Skin using SASS CSS
-TODO
+## Love from Switzerland
+Daniel & Luca
