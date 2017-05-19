@@ -41,7 +41,7 @@ You can now quickly customize and redesign everything within minutes. Check out 
 ## Creating Awesome Designed Content
 You now have created the layout within minutes or hours, but you're still missing the perfectly designed inner pieces, like tile-lists, content-accordeons, galleries, sliders, blogs and more. Fortunately these are both super-easy to add and use the same mechanisms for design. They can even re-use the variables of your skin, to automatically match look and feel :)
 
-To get the awesome designed content, install [2sxc] and the default bootstrap3 content-templates. You can then change the SCSS in the content-templates to also point to the `_variables.scss` of this skin, and re-generate all styles for an amazingly fast development workflow.
+To get the awesome designed content, install [2sxc](https://github.com/2sic/2sxc/releases) and the default bootstrap3 content-templates. You can then change the SCSS in the content-templates to also point to the `_variables.scss` of this skin, and re-generate all styles for an amazingly fast development workflow.
 
 ## Love from Switzerland
 Daniel & Luca
