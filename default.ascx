@@ -11,10 +11,6 @@
 <%--
   more infos on 2sxc quick-edit: https://2sxc.org/en/blog/post/quick-edit-2-add-move-delete-modules-in-preview-touch-capable-for-dnn
 --%>
-<%@ Register tagprefix="Edit" tagname="QuickEdit" src="~/DesktopModules/ToSIC_SexyContent/DnnWebForms/Skins/QuickEdit.ascx" %>
-<Edit:QuickEdit runat="server" />
-
-
 <%@ Register TagPrefix="tosic" TagName="SxcQuickEdit" src="controls/2sxc-quickedit.ascx" %>
 <tosic:SxcQuickEdit runat="server" />
 
