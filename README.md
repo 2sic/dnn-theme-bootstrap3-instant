@@ -32,10 +32,10 @@ There are three ways to install the initial package
 2. By using `git clone` to create a copy of this repository in your _Skins_ folder
 3. By downloading the zip and manually copying it to the _Skins_ folder
 
-You can read more about this under [Installation](installation).
+You can read more about this under [Installation](https://github.com/2sic/dnn-theme-bootstrap3-instant/wiki/installation).
 
 ## Customize and Redesign everything within Minutes
-You can now quickly customize and redesign everything within minutes. Check out the instructions on how to [Customize and Redesign](customize-and-redesign) everything. 
+You can now quickly customize and redesign everything within minutes. Check out the instructions on how to [Customize and Redesign](https://github.com/2sic/dnn-theme-bootstrap3-instant/wiki/customize-and-redesign) everything. 
 
 ## Creating Awesome Designed Content
 You now have created the layout within minutes or hours, but you're still missing the perfectly designed inner pieces, like tile-lists, content-accordeons, galleries, sliders, blogs and more. Fortunately these are both super-easy to add and use the same mechanisms for design. They can even re-use the variables of your skin, to automatically match look and feel :)
