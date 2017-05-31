@@ -1,5 +1,5 @@
 ﻿<dotnetnuke type="Package" version="5.0">
-  <packages><package name="dnn-theme-bootstrap3-instant" type="Skin" version="3.0.1">
+  <packages><package name="dnn-theme-bootstrap3-instant" type="Skin" version="3.0.2">
   <friendlyName>DNN Skin/Theme Bootstrap3 Instant</friendlyName>
   <description>A clean, prepared bootstrap3 skin for DNN (DotNetNuke), ready to make awesomeness - ideally combined with bootstrap content-templates.</description>
   <iconFile />
