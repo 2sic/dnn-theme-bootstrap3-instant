@@ -6417,8 +6417,6 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
   .ui-dialog {
     color: black;
     font-family: Arial, sans-serif; }
-  .dnnFormPopup {
-    top: 50px !important; }
   ul, ol {
     margin: 0;
     padding: 0; }

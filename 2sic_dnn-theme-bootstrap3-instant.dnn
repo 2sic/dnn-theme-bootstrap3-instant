@@ -1,5 +1,5 @@
 ﻿<dotnetnuke type="Package" version="5.0">
-  <packages><package name="dnn-theme-bootstrap3-instant" type="Skin" version="2.16.0">
+  <packages><package name="dnn-theme-bootstrap3-instant" type="Skin" version="3.0.1">
   <friendlyName>DNN Skin/Theme Bootstrap3 Instant</friendlyName>
   <description>A clean, prepared bootstrap3 skin for DNN (DotNetNuke), ready to make awesomeness - ideally combined with bootstrap content-templates.</description>
   <iconFile />
@@ -1051,6 +1051,10 @@ SOFTWARE.
         </skinFile>
         <skinFile>
           <path>controls</path>
+          <name>2sxc-quickedit.ascx</name>
+        </skinFile>
+        <skinFile>
+          <path>controls</path>
           <name>body-css-classes.ascx</name>
         </skinFile>
         <skinFile>
@@ -1229,6 +1233,9 @@ SOFTWARE.
         </skinFile>
         <skinFile>
           <name>default.doctype.xml</name>
+        </skinFile>
+        <skinFile>
+          <name>default.jpg</name>
         </skinFile>
         <skinFile>
           <name>gulpfile.js</name>
