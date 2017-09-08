@@ -29,7 +29,7 @@
 					<dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
 				</nav>
 
-				<a class="ly-logo" href="/" title="Bootstrap 3 Instant (change this in the default.ascx)">			
+				<a class="ly-logo" href="/" title="Limodor Service AG">			
 					<!--[if gte IE 9]><!-->
 					<img alt="Logo" src="<%#SkinPath%>images/logo.svg" data-fallback="<%#SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
 					<!--<![endif]-->
@@ -87,24 +87,24 @@
         <div class="ly-container-inner clearfix">
             <ul class="ly-footer-address clearfix" itemscope itemtype="http://schema.org/LocalBusiness">
 				<li>
-					<strong itemprop="name">Bootstrap 3 Instant</strong>
+					<strong itemprop="name">Limodor Service AG</strong> | 
 				</li>
 				<li>
 					<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-						<span itemprop="streetAddress">Instant Road 77</span>,
-						<span itemprop="postalCode">50355</span>
-						<span itemprop="addressLocality">Instant City</span>,
-						<span itemprop="addressCountry">Instant Country</span>
+						<span itemprop="streetAddress">Industriestrasse 8</span> | 
+						<span itemprop="postalCode">7304</span>
+						<span itemprop="addressLocality">Maienfeld</span> | 
+						<span itemprop="addressCountry">Schweiz</span>
 					</span>
 				</li>
-                <li><span class="glyphicon glyphicon-phone"></span>&nbsp;<a href="tel:+41817506777">+41 81 750 67 77</a></li>
+                <li><span class="glyphicon glyphicon-phone"></span>&nbsp;<a href="tel:00423235050">00423 239 50 50</a></li>
 				<li>
-					<span class="glyphicon glyphicon-envelope"></span>&nbsp;<span data-madr1="instant" data-madr2="example" data-madr3="com" data-linktext="instant@example.com"></span>
+					<span class="glyphicon glyphicon-envelope"></span>&nbsp;<span data-madr1="info" data-madr2="limodor-service" data-madr3="com" data-linktext="info@limodor-service.com"></span>
 				</li>
             </ul>
             <div class="ly-footer-imprint">
                 <dnn:login id="DnnLogin" cssclass="ly-login hidden-xs" runat="server" />
-                <a href="<%# LocalizeString("Imprint.Url") %>" title="Impressum"><%# LocalizeString("Imprint.Text") %></a>
+                <a href="<%# LocalizeString("Medien.Url") %>" title="Medien"><%# LocalizeString("Medien.Text") %></a> | <a href="<%# LocalizeString("Imprint.Url") %>" title="Impressum"><%# LocalizeString("Imprint.Text") %></a>
             </div>
         </div>
     </div>
