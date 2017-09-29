@@ -15,7 +15,7 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         #5C4483 !default;
+$brand-primary:         rgb(63, 140, 132)!default;
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
@@ -27,14 +27,14 @@ $brand-danger:          #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               $gray-lighter !default;
+$body-bg:               #FFFFFF !default;
 //** Global text color on `<body>`.
 $text-color:            $gray !default;
 
 //** Global textual link color.
-$link-color:            $brand-primary !default;
+$link-color:             lighten($gray-base, 10%) !default;
 //** Link hover color set via `darken()` function.
-$link-hover-color:      darken($link-color, 40%) !default;
+$link-hover-color:      $brand-primary !default;
 //** Link decoration.
 $tosic-link-decoration: none; // Custom 2sic variable
 $link-hover-decoration: underline !default;
@@ -44,18 +44,18 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  'Maven Pro','Helvetica Neue',Arial,Verdana,sans-serif !default;
+$font-family-sans-serif:  'Roboto','Helvetica Neue',Arial,Verdana,sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
-$font-size-base:          16px !default;
+$font-size-base:          20px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default;
 $font-size-small:         ceil(($font-size-base * 0.85)) !default;
 
-$font-size-h1:            floor(($font-size-base * 2.15)) !default;
-$font-size-h2:            floor(($font-size-base * 1.7)) !default;
+$font-size-h1:            floor(($font-size-base * 1.9)) !default;
+$font-size-h2:            floor(($font-size-base * 1.6)) !default;
 $font-size-h3:            ceil(($font-size-base * 1.25)) !default;
 $font-size-h4:            ceil(($font-size-base * 1.25)) !default;
 $font-size-h5:            $font-size-base !default;
@@ -68,8 +68,8 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    inherit !default;
-$headings-font-weight:    500 !default;
-$headings-line-height:    1.1 !default;
+$headings-font-weight:    300 !default;
+$headings-line-height:    1.2 !default;
 $headings-color:          inherit !default;
 
 

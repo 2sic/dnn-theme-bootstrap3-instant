@@ -18,60 +18,61 @@
 <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700" rel="stylesheet" >
 
 <a class="sr-only sr-only-focusable" href="#content"><%# LocalizeString("SkipLink.MainContent") %></a>
+<div class="ly-overlay"></div>	
 <div class="ly-fullwrapper">
 	<header>
 		<div class="container-fluid clearfix">
 			<div class="ly-container-inner">
 
-				<a href="#" class="ly-nav-mobile-trigger pull-left" title="Menu"></a>
+				<a href="#" class="ly-nav-mobile-trigger pull-right" title="Menu"></a>
 				<nav id="nav-mobile">
-					<a href="#" class="ly-close"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
+					<a class="ly-logo" href="/" title="Limodor Service AG">			
+						<img alt="Limodor Service AG" src="<%#SkinPath%>images/logo.png" />
+					</a>
+					<a href="#" class="ly-close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 					<dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
+					<div class="ly-leftpane-content">
+						<a class="ly-button" href="/" title="Gratis Inspektion">			
+							<img alt="Gratis Inspektion" src="<%#SkinPath%>images/Button-Image.png" />
+						</a>
+					</div>
 				</nav>
 
 				<a class="ly-logo" href="/" title="Limodor Service AG">			
-					<!--[if gte IE 9]><!-->
-					<img alt="Logo" src="<%#SkinPath%>images/logo.svg" data-fallback="<%#SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
-					<!--<![endif]-->
-					<!--[if lt IE 9]>
-					<img alt="" src="<%#SkinPath%>images/logo.png" />
-					<![endif]-->
+					<img alt="Limodor Service AG" src="<%#SkinPath%>images/logo.png" />
 				</a>
 
-				<nav id="nav-desktop" class="navbar navbar-default hidden-xs hidden-sm">
-					<dnn:MENU MenuStyle="nav/main" NodeSelector="*,0,0" runat="server" />
-				</nav>
+				
 
 			</div>
 		</div>
 	</header>
 
-	<div class="container-fluid ly-header-pane <%# (HeaderPane.Attributes["class"] ?? "").Contains("DNNEmptyPane") ? "ly-header-pane-empty" : "" %>">
-		<div class="ly-container-inner">
-			<div id="HeaderPane" runat="server" containertype="G" containername="Invisible Container" containersrc="default.ascx"></div>
-		</div>
-	</div>
+	
 
 	<div id="content">
 		<div class="container-fluid ly-content">
 
-		<p class="ly-welcome-text">
-			This is the Bootstrap3 Instant Theme for DNN. Read the <a href="https://github.com/2sic/dnn-theme-bootstrap3-instant/wiki">Wiki</a> for further instructions.
-		</p>
-
 			<div class="ly-container-inner">
-				<div class="ly-contentpane-full">
-					<div id="ContentPane" runat="server" containertype="G" containername="Invisible Container" containersrc="default.ascx"></div>
-				</div>
+				
 				<div class="row">
-					<div class="col-xs-12 col-md-9 col-md-push-3 ly-col-contentpane">
-						<div id="RightPane" runat="server" containertype="G" containername="Invisible Container" containersrc="default.ascx"></div>
+					<div class="col-xs-12 col-md-8 col-md-push-4 ly-col-contentpane">
+						<div id="ContentPane" runat="server" containertype="G" containername="ToSIC-Invisible" containersrc="default.ascx"></div>
 					</div>
-					<div class="col-xs-12 col-md-3 col-md-pull-9 ly-col-leftpane">
-						<div class="hidden-xs">
-							<dnn:MENU MenuStyle="nav/sub" NodeSelector="+0,0,2" runat="server" />
+					<div class="col-xs-12 col-md-4 col-md-pull-8 ly-col-leftpane">
+						<div class="hidden-xs hidden-sm">
+							<nav>
+								<dnn:MENU MenuStyle="nav/sub" NodeSelector="*,0,4" runat="server" />
+							</nav>
+							<div class="ly-leftpane-content">
+								<a class="ly-button" href="/service/gratis-inspektion" title="Gratis Inspektion">			
+									<img alt="Gratis Inspektion" src="<%#SkinPath%>images/Button-Image.png" />
+								</a>
+							</div>
+							
 						</div>
-						<div class="visible-xs">
+						
+						<div class="visible-xs visible-sm">
 							<dnn:MENU MenuStyle="nav/sub" NodeSelector="CurrentChildren" runat="server" />
 						</div>
 					</div>
@@ -85,6 +86,8 @@
 <footer>
     <div class="container-fluid">
         <div class="ly-container-inner clearfix">
+			<div class="ly-footer-login"> <dnn:login id="DnnLogin" cssclass="ly-login hidden-xs" runat="server" /></div>
+			
             <ul class="ly-footer-address clearfix" itemscope itemtype="http://schema.org/LocalBusiness">
 				<li>
 					<strong itemprop="name">Limodor Service AG</strong> | 
@@ -97,21 +100,27 @@
 						<span itemprop="addressCountry">Schweiz</span>
 					</span>
 				</li>
-                <li><span class="glyphicon glyphicon-phone"></span>&nbsp;<a href="tel:00423235050">00423 239 50 50</a></li>
+                <li></span><a href="tel:00423235050">Tel: 00423 239 50 50</a> |</li>
 				<li>
-					<span class="glyphicon glyphicon-envelope"></span>&nbsp;<span data-madr1="info" data-madr2="limodor-service" data-madr3="com" data-linktext="info@limodor-service.com"></span>
+					<span data-madr1="info" data-madr2="limodor-service" data-madr3="com" data-linktext="info@limodor-service.com"></span>
 				</li>
             </ul>
             <div class="ly-footer-imprint">
-                <dnn:login id="DnnLogin" cssclass="ly-login hidden-xs" runat="server" />
+               
                 <a href="<%# LocalizeString("Medien.Url") %>" title="Medien"><%# LocalizeString("Medien.Text") %></a> | <a href="<%# LocalizeString("Imprint.Url") %>" title="Impressum"><%# LocalizeString("Imprint.Text") %></a>
             </div>
+			<div class="ly-logo-minergie">			
+						<img alt="Minergie Member" src="<%#SkinPath%>images/logo-minergie.png" />
+			</div>
+			
         </div>
     </div>
 </footer>
 
 <!-- include files in head -->
 <dnn:DnnCssInclude runat="server" FilePath="dist/full-package.css" Priority="100" PathNameAlias="SkinPath" />
+<dnn:DnnCssInclude runat="server" FilePath="~/Portals/_default/Skins/_default/ToEasyDNN.css" Priority="150" />
+
 
 <dnn:DnnJsInclude runat="server" FilePath="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js" ForceProvider="DnnFormBottomProvider" Priority="100" PathNameAlias="SkinPath" />
 <dnn:DnnJsInclude runat="server" FilePath="bower_components/sidr/dist/jquery.sidr.min.js" ForceProvider="DnnFormBottomProvider" Priority="110" PathNameAlias="SkinPath" />

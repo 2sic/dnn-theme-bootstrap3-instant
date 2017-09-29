@@ -21,6 +21,27 @@
 			padding-right: $grid-gutter-width*1.5;
 		}
 	}
+	.ly-overlay {
+		display: none;
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(63, 140, 132,0.8);
+		z-index: 2000;
+	}
+
+	.ly-button {
+		display: block;
+		width:160px;
+		height: auto;
+		margin-top:20px;
+        img {
+            width:100%;
+			height: auto;
+        }
+    }
 	
 	#content {
 		.container-fluid.ly-content { 

@@ -121,10 +121,16 @@
     <value>schliessen</value>
   </data>
   <data name="Imprint.Text" xml:space="preserve">
-    <value>Impressum</value>
+    <value>AGB &amp; Impressum</value>
   </data>
   <data name="Imprint.Url" xml:space="preserve">
     <value>/Impressum</value>
+  </data>
+  <data name="Medien.Text" xml:space="preserve">
+    <value>Medien</value>
+  </data>
+  <data name="Medien.Url" xml:space="preserve">
+    <value>/Medien</value>
   </data>
   <data name="SkipLink.MainContent" xml:space="preserve">
     <value>Zum Inhalt springen</value>

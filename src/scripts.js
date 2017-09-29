@@ -15,9 +15,11 @@ $(function() {
 	    source: "#nav-mobile",
 	    renaming: false,
 	    body: "form",
-		//displace: false, // change to true if sidr has bugs with your layout
-	    onOpen: function () { $("body").addClass("ly-disablescroll"); $("#nav-main-offcanvas").height($("body").height()); },
-	    onClose: function () { $("body").removeClass("ly-disablescroll"); }
+		displace: false,
+		side: "right",
+	    onOpen: function () { $("body").addClass("ly-disablescroll"); $('.ly-overlay').fadeIn(200);
+	},
+	    onClose: function () { $("body").removeClass("ly-disablescroll");$('.ly-overlay').fadeOut(200); }
 	});
 	
 	/* More responsiveness by using touchstart */
