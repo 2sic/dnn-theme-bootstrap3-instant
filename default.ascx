@@ -17,7 +17,7 @@
 <%-- Include Google Font --%>
 <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700" rel="stylesheet" >
 
-<a class="sr-only sr-only-focusable" href="#content"><%# LocalizeString("SkipLink.MainContent") %></a>
+<a class="sr-only sr-only-focusable" href="#content"><%= LocalizeString("SkipLink.MainContent") %></a>
 <div class="ly-fullwrapper">
 	<header>
 		<div class="container-fluid clearfix">
@@ -31,10 +31,10 @@
 
 				<a class="ly-logo" href="/" title="Bootstrap 3 Instant (change this in the default.ascx)">			
 					<!--[if gte IE 9]><!-->
-					<img alt="Logo" src="<%#SkinPath%>images/logo.svg" data-fallback="<%#SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
+					<img alt="Logo" src="<%=SkinPath%>images/logo.svg" data-fallback="<%=SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
 					<!--<![endif]-->
 					<!--[if lt IE 9]>
-					<img alt="" src="<%#SkinPath%>images/logo.png" />
+					<img alt="" src="<%=SkinPath%>images/logo.png" />
 					<![endif]-->
 				</a>
 
@@ -46,7 +46,7 @@
 		</div>
 	</header>
 
-	<div class="container-fluid ly-header-pane <%# (HeaderPane.Attributes["class"] ?? "").Contains("DNNEmptyPane") ? "ly-header-pane-empty" : "" %>">
+	<div class="container-fluid ly-header-pane <%= (HeaderPane.Attributes["class"] ?? "").Contains("DNNEmptyPane") ? "ly-header-pane-empty" : "" %>">
 		<div class="ly-container-inner">
 			<div id="HeaderPane" runat="server" containertype="G" containername="Invisible Container" containersrc="default.ascx"></div>
 		</div>
@@ -104,7 +104,7 @@
             </ul>
             <div class="ly-footer-imprint">
                 <dnn:login id="DnnLogin" cssclass="ly-login hidden-xs" runat="server" />
-                <a href="<%# LocalizeString("Imprint.Url") %>" title="Impressum"><%# LocalizeString("Imprint.Text") %></a>
+                <a href="<%= LocalizeString("Imprint.Url") %>" title="Impressum"><%= LocalizeString("Imprint.Text") %></a>
             </div>
         </div>
     </div>
@@ -143,3 +143,4 @@
 			return Localization.GetString(key, Localization.GetResourceFile(this, System.IO.Path.GetFileName(this.AppRelativeVirtualPath)));
 	}
 </script>
+
