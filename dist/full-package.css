@@ -5921,7 +5921,9 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
 @media all {
   /*#region Header (and Main Navigation) */
   header {
-    background: #fff; }
+    background: #fff;
+    position: relative;
+    z-index: 20; }
     header .container-fluid {
       padding-top: 20px;
       padding-bottom: 20px; }
@@ -6060,13 +6062,13 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
       padding-right: 25px; }
     .ly-header-mobile .ly-logo {
       display: block;
-      width: 70px; }
-    .ly-header-mobile img {
-      width: 100px;
-      max-width: 100%;
-      height: auto; }
-    .ly-header-mobile svg {
-      max-height: 54px; }
+      width: 120px; }
+      .ly-header-mobile .ly-logo img {
+        width: 100%;
+        max-width: 100%;
+        height: auto; }
+      .ly-header-mobile .ly-logo svg {
+        max-height: 54px; }
   /* Region Mobile Navigation (in Sidr) */
   .ly-nav-mobile {
     margin: 15px 0;
@@ -6093,8 +6095,7 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
         display: block;
         padding: 10px 15px 10px 16px;
         color: #fff;
-        font-size: 18px;
-        font-weight: 700; }
+        font-size: 18px; }
       .ly-nav-mobile > li.active > .ly-linkwrapper > a,
       .ly-nav-mobile > li > .ly-linkwrapper > a:hover {
         color: rgba(255, 255, 255, 0.5); }
@@ -6149,7 +6150,7 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
                   .ly-nav-mobile > li > ul > li > ul > li > ul > li ul li .ly-linkwrapper a {
                     color: #fff;
                     display: block;
-                    padding: 4px 10px 4px 80px;
+                    padding: 4px 10px 4px 60px;
                     font-size: 0.85em; }
                   .ly-nav-mobile > li > ul > li > ul > li > ul > li ul li.active .ly-linkwrapper a,
                   .ly-nav-mobile > li > ul > li > ul > li > ul > li ul li .ly-linkwrapper a:hover {
@@ -6157,31 +6158,24 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
     .ly-nav-mobile li .ly-linkwrapper {
       position: relative; }
       .ly-nav-mobile li .ly-linkwrapper .ly-navopener {
-        padding: 15px;
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background: rgba(0, 0, 0, 0.2);
         position: absolute;
         right: 0;
+        width: 40px;
+        text-align: center;
         top: 0;
         bottom: 0;
         cursor: pointer; }
         .ly-nav-mobile li .ly-linkwrapper .ly-navopener .ly-navopener-icon {
-          margin-top: -8px;
           font-size: 20px;
           font-family: sans-serif; }
           .ly-nav-mobile li .ly-linkwrapper .ly-navopener .ly-navopener-icon:before {
             content: "+"; }
     .ly-nav-mobile li.ly-active > .ly-linkwrapper .ly-navopener .ly-navopener-icon:before {
       content: "–"; }
-    .ly-nav-mobile ul ul .ly-navopener {
-      padding: 18px;
-      display: inline-block;
-      background: transparent;
-      position: absolute;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      cursor: pointer; }
   /*#endregion*/
   /*Burger Icon*/ }
 

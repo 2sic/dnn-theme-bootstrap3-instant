@@ -5,6 +5,8 @@
 	/*#region Header (and Main Navigation) */
 	header { 
 		background: $tosic-header-background;
+		position:relative;
+		z-index: 20;
 		
 		.container-fluid { 
 			padding-top:20px;

@@ -107,16 +107,17 @@
         }
         .ly-logo {
             display: block;
-            width: 70px;
+            width: 120px;
+            img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+            svg {
+                max-height: 54px;
+            }
         }
-        img {
-            width: 100px;
-            max-width: 100%;
-            height: auto;
-        }
-        svg {
-            max-height: 54px;
-        }
+        
     }
     /* Region Mobile Navigation (in Sidr) */
     .ly-nav-mobile {
@@ -147,7 +148,6 @@
                 padding: 10px 15px 10px 16px;
                 color: #fff;
                 font-size: 18px;
-                font-weight: 700;
             }
             &.active>.ly-linkwrapper>a,
             >.ly-linkwrapper>a:hover {
@@ -215,7 +215,7 @@
                                             .ly-linkwrapper a {
                                                 color: #fff;
                                                 display: block;
-                                                padding: 4px 10px 4px 80px;
+                                                padding: 4px 10px 4px 60px;
                                                 font-size: 0.85em;
                                             }
                                             &.active .ly-linkwrapper a,
@@ -235,16 +235,18 @@
             .ly-linkwrapper {
                 position: relative;
                 .ly-navopener {
-                    padding: 15px;
-                    display: inline-block;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     background: rgba(0, 0, 0, 0.2);
                     position: absolute;
                     right: 0;
+                    width:40px;
+                    text-align: center;
                     top: 0;
                     bottom: 0;
                     cursor: pointer;
                     .ly-navopener-icon {
-                        margin-top: -8px;
                         font-size: 20px;
                         font-family: sans-serif;
                         &:before {
@@ -263,16 +265,7 @@
                 }
             }
         }
-        ul ul .ly-navopener {
-            padding: 18px;
-            display: inline-block;
-            background: transparent;
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            cursor: pointer;
-        }
+        
     }
     /*#endregion*/
     /*Burger Icon*/
@@ -300,20 +293,16 @@
         border-radius: 2px;
         opacity: 1;
         left: 0;
-        
     }
     #nav-icon {}
     #nav-icon span:nth-child(1) {
         top: 0px;
-        
     }
     #nav-icon span:nth-child(2) {
         top: 8px;
-        
     }
     #nav-icon span:nth-child(3) {
         top: 16px;
-      
     }
     .ly-overlay {
         display: none;
