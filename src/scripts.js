@@ -16,10 +16,10 @@ $(function() {
 	    renaming: false,
 	    body: "form",
 		//displace: false, // change to true if sidr has bugs with your layout
-	    onOpen: function () { $("body").addClass("ly-disablescroll"); $("#nav-main-offcanvas").height($("body").height()); },
-	    onClose: function () { $("body").removeClass("ly-disablescroll"); }
+	    onOpen: function () { $("body").addClass("ly-disablescroll"); $('.ly-overlay').fadeIn(200); },
+	    onClose: function () { $("body").removeClass("ly-disablescroll"); $('.ly-overlay').fadeOut(200); }
 	});
-	
+		
 	/* More responsiveness by using touchstart */
 	$('.ly-nav-mobile-trigger').on("touchstart", function(e){
 		e.preventDefault();
@@ -44,7 +44,6 @@ $(function() {
 
 	/* Mobile Navigation */
     $('#nav-main-offcanvas .ly-navopener').click(function () {
-		console.log('hw');
         $(this).parent().parent().toggleClass('ly-active').find('ul:first').slideToggle();
     });
 
@@ -96,4 +95,16 @@ $(window).scroll(function() {
 	} else {
 		$('.ly-top').removeClass('ly-top-visible');
 	}
+});
+
+$(window).scroll(function(){
+	var headerHeight = $('header').outerHeight();
+    if ($(window).scrollTop() >= headerHeight) {
+		$('header').addClass('fixed-header');
+		$('body').addClass('fixed');
+    }
+    else {
+	   $('header').removeClass('fixed-header');
+		$('body').removeClass('fixed');
+    }
 });

@@ -22,20 +22,26 @@
 	<header>
 		<div class="container-fluid clearfix">
 			<div class="ly-container-inner">
-
-				<a href="#" class="ly-nav-mobile-trigger pull-left" title="Menu"></a>
+				<div class="ly-overlay"></div>	
+				<div id="nav-icon" class="ly-nav-mobile-trigger pull-left" title="Menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 				<nav id="nav-mobile">
-					<a href="#" class="ly-close"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
+					<div class="ly-header-mobile">
+						<div class="container-fluid clearfix">
+							<a href="#" class="ly-close"></a>
+							<a class="ly-logo" href="/" title="Bootstrap 3 Instant (change this in the default.ascx)">			
+								<img alt="Logo" src="<%#SkinPath%>images/logo.svg" data-fallback="<%#SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
+							</a>
+						</div>
+					</div>
 					<dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
 				</nav>
 
 				<a class="ly-logo" href="/" title="Bootstrap 3 Instant (change this in the default.ascx)">			
-					<!--[if gte IE 9]><!-->
 					<img alt="Logo" src="<%=SkinPath%>images/logo.svg" data-fallback="<%=SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
-					<!--<![endif]-->
-					<!--[if lt IE 9]>
-					<img alt="" src="<%=SkinPath%>images/logo.png" />
-					<![endif]-->
 				</a>
 
 				<nav id="nav-desktop" class="navbar navbar-default hidden-xs hidden-sm">

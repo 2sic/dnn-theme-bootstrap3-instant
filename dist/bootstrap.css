@@ -1055,7 +1055,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Maven Pro", "Helvetica Neue", Arial, Verdana, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Arial, Verdana, sans-serif;
   font-size: 16px;
   line-height: 1.42857;
   color: #555555;
@@ -5184,7 +5184,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Maven Pro", "Helvetica Neue", Arial, Verdana, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Arial, Verdana, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5297,7 +5297,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Maven Pro", "Helvetica Neue", Arial, Verdana, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Arial, Verdana, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5822,4 +5822,3 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
   text-decoration: none; }
 
 /*# sourceMappingURL=bootstrap.css.map */
-
