@@ -15,7 +15,7 @@
 <tosic:SxcQuickEdit runat="server" />
 
 <%-- Include Google Font --%>
-<link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700" rel="stylesheet" >
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
 <a class="sr-only sr-only-focusable" href="#content"><%= LocalizeString("SkipLink.MainContent") %></a>
 <div class="ly-fullwrapper">

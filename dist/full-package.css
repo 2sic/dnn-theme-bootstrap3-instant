@@ -5894,7 +5894,8 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
   body {
     overflow-y: scroll;
     min-height: 100%;
-    height: auto; }
+    height: auto;
+    padding: 140px 0 100px 0; }
   .container-fluid {
     max-width: 1200px;
     padding-left: 15px;
@@ -5919,11 +5920,22 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
 /* Custom 2sic variables */
 /* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
 @media all {
-  /*#region Header (and Main Navigation) */
   header {
     background: #fff;
     position: relative;
-    z-index: 20; }
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    transition: height 0.4s ease-in-out; }
+    header.fixed-header {
+      height: 80px;
+      -webkit-box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.53);
+      -moz-box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.53);
+      box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.53); }
+      header.fixed-header .ly-logo {
+        width: 130px; }
     header .container-fluid {
       padding-top: 20px;
       padding-bottom: 20px; }
@@ -5931,14 +5943,14 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
     display: block;
     width: 170px;
     max-width: 80%;
-    height: auto; }
+    height: auto;
+    transition: width 0.4s ease-in-out; }
     .ly-logo img {
       width: 100%;
       max-width: 100%;
       height: auto; }
   .ly-header-pane {
-    padding: 0; }
-  /*#endregion*/ }
+    padding: 0; } }
 
 /* Custom 2sic variables */
 /* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
@@ -6325,6 +6337,8 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
     background: transparent; }
     body.va-layout-box header .container-fluid {
       background: #fff; }
+    body.va-layout-box header.fixed-header {
+      box-shadow: none; }
   body.va-layout-box .ly-header-pane {
     margin-top: 0;
     background: #fff; }
@@ -6338,7 +6352,8 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
 @media all {
   /*layout wide*/
   body.va-layout-wide {
-    background-color: #fff; }
+    background-color: #ECEFF1;
+    margin-bottom: 40px; }
     body.va-layout-wide .ly-header-pane {
       margin-top: 0;
       /* only one module in headerpane -> bugs in dnn-sortable (moving modules in panes with drag and drop) */ } }
@@ -6361,7 +6376,7 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
         height: 0; } }
   @media all and (min-width: 1450px) {
     body.va-layout-wide.tab-home .ly-header-pane {
-      margin-bottom: -100px; } }
+      margin-bottom: -200px; } }
 
 @media all {
     body.va-layout-wide .ly-header-pane-empty .ly-container-inner {
@@ -6382,21 +6397,23 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
 @media all {
   /*layout full*/
   body.va-layout-full {
+    background-image: none;
     /* Sticky Footer */
     height: 100%; }
     body.va-layout-full header {
-      box-shadow: 0 0 20px;
-      position: relative;
-      z-index: 5; }
+      box-shadow: 0 0 20px; }
+    body.va-layout-full .fixed-header {
+      position: fixed; }
     body.va-layout-full .ly-header-pane {
-      background: #5C4483;
+      background: transparent;
       margin-top: 0;
       width: 100%; }
       body.va-layout-full .ly-header-pane.container-fluid {
         max-width: 100%; }
         body.va-layout-full .ly-header-pane.container-fluid .ly-container-inner {
           max-width: 1920px;
-          margin: 0 auto; }
+          margin: 0 auto;
+          overflow: hidden; }
     body.va-layout-full #content .container-fluid.ly-content {
       position: relative; }
     body.va-layout-full #content .container-fluid.ly-content {

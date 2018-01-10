@@ -5,21 +5,26 @@
 	
 	/*layout full*/
 	body.va-layout-full {
+		background-image: none;
 		header {
 			box-shadow: 0 0 20px;
-			position: relative;
-			z-index: 5;
+			
+		}
+		.fixed-header {
+			position:fixed;
 		}
 		.ly-header-pane {
-			background: $brand-primary;
+			background: transparent;
 			margin-top: 0;
 			width: 100%;
+			
 
 			&.container-fluid {
 				max-width: 100%;
 				.ly-container-inner {
 					max-width: 1920px;
 					margin: 0 auto;
+					overflow:hidden;
 				}
 			}
 		}		

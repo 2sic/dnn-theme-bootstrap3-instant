@@ -10,6 +10,10 @@
 			.container-fluid {
 				background: $tosic-header-background;
 			}
+
+			&.fixed-header {
+				box-shadow: none;
+			}
 		}
 		.ly-header-pane {
 			margin-top: 0;

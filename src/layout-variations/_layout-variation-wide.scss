@@ -4,7 +4,8 @@
 @media all {
 	/*layout wide*/
 	body.va-layout-wide {
-		background-color: #fff;
+		background-color: #ECEFF1;
+		margin-bottom:40px;
 		
 		.ly-header-pane {
 			margin-top: 0;
@@ -33,7 +34,7 @@
 		&.tab-home {
 			.ly-header-pane {
 				@media(min-width: 1450px){
-					margin-bottom: -100px;
+					margin-bottom: -200px;
 				}
 			}
 			

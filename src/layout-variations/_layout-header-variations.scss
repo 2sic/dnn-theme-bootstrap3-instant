@@ -24,7 +24,7 @@
     }
     /* header centered */
     body.va-mainnav-center {
-        &.fixed {
+         &.fixed {
             height: 65px;
             @media(min-width: $screen-sm-min) {
                 height:120px;
@@ -38,7 +38,6 @@
             }
             &.fixed-header {
                 height: 120px;
-                ;
                 .container-fluid {
                     max-height: 200px;
                 }

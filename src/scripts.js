@@ -15,9 +15,9 @@ $(function() {
 	    source: "#nav-mobile",
 	    renaming: false,
 	    body: "form",
-		//displace: false, // change to true if sidr has bugs with your layout
-	    onOpen: function () { $("body").addClass("ly-disablescroll"); $('.ly-overlay').fadeIn(200); },
-	    onClose: function () { $("body").removeClass("ly-disablescroll"); $('.ly-overlay').fadeOut(200); }
+		displace: false, // change to true if sidr has bugs with your layout
+	    onOpen: function () { $("body").addClass("ly-disablescroll"); $('.ly-overlay').fadeIn(200); /*$("#nav-main-offcanvas").height($("body").height());*/ },
+	    onClose: function () { $("body").removeClass("ly-disablescroll");$('.ly-overlay').fadeOut(200);}
 	});
 		
 	/* More responsiveness by using touchstart */
@@ -89,6 +89,15 @@ $(function() {
         return false;
     });
 });
+/*Burger animation */
+	$('#nav-icon').click(function(){
+		$(this).toggleClass('open');
+	});
+	$('.ly-close').click(function(){
+		$('#nav-icon').toggleClass('open');
+	});
+
+/*END Burger animation*/
 $(window).scroll(function() {
 	if($(this).scrollTop() > 200) {
 		$('.ly-top').addClass('ly-top-visible');    
@@ -98,10 +107,10 @@ $(window).scroll(function() {
 });
 
 $(window).scroll(function(){
-	var headerHeight = $('header').outerHeight();
-    if ($(window).scrollTop() >= headerHeight) {
+    if ($(window).scrollTop() >= 1) {
 		$('header').addClass('fixed-header');
 		$('body').addClass('fixed');
+		
     }
     else {
 	   $('header').removeClass('fixed-header');
