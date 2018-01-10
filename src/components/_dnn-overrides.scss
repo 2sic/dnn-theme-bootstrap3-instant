@@ -14,7 +14,12 @@
 
 	ul, ol {
 		margin: 0;
-		padding: 0;
+	}
+	ul {
+		list-style-type: disc;
+		ul {
+			list-style-type: circle;
+		}
 	}
 	/*#endregion*/
 
@@ -28,4 +33,5 @@
 	#ControlBar_ControlPanel #ServiceImg {
 		display:none;
 	}
+	
 }

@@ -4,8 +4,11 @@
 @media all {
 
     #nav-desktop {
-        margin: 3px 0 0 0;
-		float: right;
+        margin: 0;
+        margin-top:5px;
+        float: right;
+         /* Main Navigation */
+        
     }
 
 	/* Reset for all Navigations */
@@ -14,27 +17,26 @@
 			margin: 0;
 			padding: 0;
 		}
-	}
-	
-    /* Main Navigation */
+    }
+    
+    .navbar-default {
     .ly-nav-main {
         li {
             a {
                 text-decoration:none;
+                color:$text-color;
                 border-radius:5px;
                 font-family:$headings-font-family;
-                font-size:18px;
-				color: $brand-primary;
+                font-size: floor($font-size-base * 1.13);
                 margin:0 0 0 5px;
-                padding:5px 15px;
-                border-width:0;
-                border-color:transparent;
-                border-style:solid;
-				transition: background-color .5s;
+                padding:5px 15px; 
+                border:0px solid transparent;
+                transition: background-color .5s;
             }
             &.active a {
                 border-color:$brand-primary;
             }
         }
+    }
     }
 }

@@ -5944,26 +5944,25 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
 /* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
 @media all {
   #nav-desktop {
-    margin: 3px 0 0 0;
-    float: right; }
+    margin: 0;
+    margin-top: 5px;
+    float: right;
+    /* Main Navigation */ }
   /* Reset for all Navigations */
   .ly-nav, .ly-nav ul, .ly-nav li {
     margin: 0;
     padding: 0; }
-  /* Main Navigation */
-  .ly-nav-main li a {
+  .navbar-default .ly-nav-main li a {
     text-decoration: none;
+    color: #555555;
     border-radius: 5px;
     font-family: inherit;
     font-size: 18px;
-    color: #5C4483;
     margin: 0 0 0 5px;
     padding: 5px 15px;
-    border-width: 0;
-    border-color: transparent;
-    border-style: solid;
+    border: 0px solid transparent;
     transition: background-color .5s; }
-  .ly-nav-main li.active a {
+  .navbar-default .ly-nav-main li.active a {
     border-color: #5C4483; } }
 
 /* Custom 2sic variables */
@@ -6541,8 +6540,11 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
     color: black;
     font-family: Arial, sans-serif; }
   ul, ol {
-    margin: 0;
-    padding: 0; }
+    margin: 0; }
+  ul {
+    list-style-type: disc; }
+    ul ul {
+      list-style-type: circle; }
   /*#endregion*/
   a.ly-login, a.ly-login:link, a.ly-login:visited {
     color: #5C4483;
