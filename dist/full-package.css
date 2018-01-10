@@ -5959,7 +5959,7 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
     margin: 0;
     margin-top: 5px;
     float: right;
-    /* Main Navigation */ }
+    transition: margin .4s; }
   /* Reset for all Navigations */
   .ly-nav, .ly-nav ul, .ly-nav li {
     margin: 0;
@@ -5997,7 +5997,9 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
       color: #5C4483; }
     .navbar-default .ly-nav-main li.active > a:after {
       width: calc(100% - 30px);
-      left: 15px; } }
+      left: 15px; }
+  .fixed-header #nav-desktop {
+    margin-top: -4px; } }
 
 /* Custom 2sic variables */
 /* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
