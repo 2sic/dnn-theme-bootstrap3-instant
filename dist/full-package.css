@@ -5971,11 +5971,33 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
     font-family: inherit;
     font-size: 18px;
     margin: 0 0 0 5px;
-    padding: 5px 15px;
+    padding: 10px 15px;
     border: 0px solid transparent;
-    transition: background-color .5s; }
-  .navbar-default .ly-nav-main li.active a {
-    border-color: #5C4483; } }
+    transition: color .5s; }
+    .navbar-default .ly-nav-main li a:hover, .navbar-default .ly-nav-main li a:focus {
+      background-color: transparent;
+      color: #5C4483; }
+      .navbar-default .ly-nav-main li a:hover:after, .navbar-default .ly-nav-main li a:focus:after {
+        width: calc(100% - 30px);
+        left: 15px; }
+    .navbar-default .ly-nav-main li a:after {
+      content: " ";
+      height: 1px;
+      width: 0;
+      background: #5C4483;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: width .4s; }
+  .navbar-default .ly-nav-main li.active > a {
+    background-color: transparent;
+    color: #5C4483; }
+    .navbar-default .ly-nav-main li.active > a:hover, .navbar-default .ly-nav-main li.active > a:focus {
+      background-color: transparent;
+      color: #5C4483; }
+    .navbar-default .ly-nav-main li.active > a:after {
+      width: calc(100% - 30px);
+      left: 15px; } }
 
 /* Custom 2sic variables */
 /* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
