@@ -3,7 +3,7 @@
 
 @media all {
 
-	/*#region DNN Overrides and default styles (do not change) */	
+	/*DNN Overrides and default styles (do not change) */	
 	/* box-sizing Fixes for DNN components, 3dr party plugins, modules */
 	#ControlBar_ControlPanel * { box-sizing:content-box; }
 	#ControlBar_ControlPanel .mark { background-color: transparent; padding: 0; }
@@ -21,7 +21,6 @@
 			list-style-type: circle;
 		}
 	}
-	/*#endregion*/
 
 	a.ly-login, a.ly-login:link, a.ly-login:visited {
 		color:$tosic-footer-background;

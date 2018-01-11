@@ -5895,7 +5895,7 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
     overflow-y: scroll;
     min-height: 100%;
     height: auto;
-    padding: 140px 0 100px 0; }
+    padding: 100px 0 100px 0; }
   .container-fluid {
     max-width: 1200px;
     padding-left: 15px;
@@ -5920,6 +5920,8 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
 /* Custom 2sic variables */
 /* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
 @media all {
+  .role-admin header {
+    margin-top: 54px; }
   header {
     background: #fff;
     position: relative;
@@ -6563,7 +6565,7 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
 /* Custom 2sic variables */
 /* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
 @media all {
-  /*#region DNN Overrides and default styles (do not change) */
+  /*DNN Overrides and default styles (do not change) */
   /* box-sizing Fixes for DNN components, 3dr party plugins, modules */
   #ControlBar_ControlPanel * {
     box-sizing: content-box; }
@@ -6586,7 +6588,6 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
     list-style-type: disc; }
     ul ul {
       list-style-type: circle; }
-  /*#endregion*/
   a.ly-login, a.ly-login:link, a.ly-login:visited {
     color: #5C4483;
     font-size: 10px; }
