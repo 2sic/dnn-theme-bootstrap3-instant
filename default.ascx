@@ -83,7 +83,7 @@
 					</div>
 				</div>
 			</div>
-			<a class="ly-top" href="#" title="Nach oben"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a>
+			<a class="ly-top" href="#" title="Nach oben"><i></i></a>
 		</div>
 	</div>
 	<div class="ly-push"></div>
