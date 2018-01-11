@@ -87,7 +87,14 @@ $(function() {
             scrollTop: 0
         }, 1200, 'easeOutExpo');
         return false;
-    });
+	});
+	
+	// Check if DNN < 9
+	if ($("body.role-admin").length > 0) {
+		if ($(".personalBarContainer").length > 0) {
+			$("header").css("margin-top", "0");
+		}
+	}
 });
 /*Burger animation */
 	$('#nav-icon').click(function(){
@@ -106,6 +113,7 @@ $(window).scroll(function() {
 	}
 });
 
+// Sticky header
 $(window).scroll(function(){
     if ($(window).scrollTop() >= 1) {
 		$('header').addClass('fixed-header');
@@ -117,3 +125,4 @@ $(window).scroll(function(){
 		$('body').removeClass('fixed');
     }
 });
+
