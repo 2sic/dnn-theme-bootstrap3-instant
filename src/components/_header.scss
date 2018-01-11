@@ -24,6 +24,12 @@
 
 			.ly-logo {
 				width: 130px;
+
+				svg {
+					/* If you use an SVG as Logo, you will have to give it a fixed height
+					   in this selector, orelse you may experience issues in IE */
+					height: auto;
+				}
 			}
 		}
 		
@@ -44,7 +50,13 @@
             width:100%;
             max-width:100%;
 			height: auto;
-        }
+		}
+		
+		svg {
+			/* If you use an SVG as Logo, you will have to give it a fixed height
+			   in this selector, orelse you may experience issues in IE */
+			
+		}
     }
 
     .ly-header-pane { 

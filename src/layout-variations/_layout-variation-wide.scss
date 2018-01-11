@@ -51,6 +51,7 @@
 		}
 		#content .container-fluid.ly-content {
 			position: relative;
+			z-index: 11;
 		}
 	
 		.ly-fullwrapper .ly-push { display: none; }

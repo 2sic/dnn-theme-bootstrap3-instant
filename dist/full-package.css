@@ -5895,7 +5895,7 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
     overflow-y: scroll;
     min-height: 100%;
     height: auto;
-    padding: 100px 0 100px 0; }
+    padding: 100px 0 0 0; }
   .container-fluid {
     max-width: 1200px;
     padding-left: 15px;
@@ -5938,6 +5938,10 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
       box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.53); }
       header.fixed-header .ly-logo {
         width: 130px; }
+        header.fixed-header .ly-logo svg {
+          /* If you use an SVG as Logo, you will have to give it a fixed height
+					   in this selector, orelse you may experience issues in IE */
+          height: auto; }
     header .container-fluid {
       padding-top: 20px;
       padding-bottom: 20px; }
@@ -5951,6 +5955,9 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
       width: 100%;
       max-width: 100%;
       height: auto; }
+    .ly-logo svg {
+      /* If you use an SVG as Logo, you will have to give it a fixed height
+			   in this selector, orelse you may experience issues in IE */ }
   .ly-header-pane {
     padding: 0; } }
 
@@ -5980,15 +5987,14 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
       background-color: transparent;
       color: #5C4483; }
       .navbar-default .ly-nav-main li a:hover:after, .navbar-default .ly-nav-main li a:focus:after {
-        width: calc(100% - 30px);
-        left: 15px; }
+        width: calc(100% - 30px); }
     .navbar-default .ly-nav-main li a:after {
       content: " ";
       height: 1px;
       width: 0;
       background: #5C4483;
       position: absolute;
-      left: 0;
+      left: 15px;
       bottom: 0;
       transition: width .4s; }
   .navbar-default .ly-nav-main li.active > a {
@@ -6437,7 +6443,8 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
 
 @media all {
     body.va-layout-wide #content .container-fluid.ly-content {
-      position: relative; }
+      position: relative;
+      z-index: 11; }
     body.va-layout-wide .ly-fullwrapper .ly-push {
       display: none; } }
 
