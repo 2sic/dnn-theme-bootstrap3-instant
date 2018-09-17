@@ -17,6 +17,8 @@
 <%-- Include Google Font --%>
 <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700" rel="stylesheet" >
 
+
+
 <a class="sr-only sr-only-focusable" href="#content"><%# LocalizeString("SkipLink.MainContent") %></a>
 <div class="ly-overlay"></div>	
 <div class="ly-fullwrapper">
@@ -26,8 +28,8 @@
 
 				<a href="#" class="ly-nav-mobile-trigger pull-right" title="Menu"></a>
 				<nav id="nav-mobile">
-					<a class="ly-logo" href="/" title="Limodor Service AG">			
-						<img alt="Limodor Service AG" src="<%#SkinPath%>images/logo.png" />
+					<a class="ly-logo" href="/" title="LIMODOR Service AG">			
+						<img alt="LIMODOR Service AG" src="<%#SkinPath%>images/logo.png" />
 					</a>
 					<a href="#" class="ly-close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 					<dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
@@ -38,8 +40,8 @@
 					</div>
 				</nav>
 
-				<a class="ly-logo" href="/" title="Limodor Service AG">			
-					<img alt="Limodor Service AG" src="<%#SkinPath%>images/logo.png" />
+				<a class="ly-logo" href="/" title="LIMODOR Service AG">			
+					<img alt="LIMODOR Service AG" src="<%#SkinPath%>images/logo.png" />
 				</a>
 
 				
@@ -86,11 +88,10 @@
 <footer>
     <div class="container-fluid">
         <div class="ly-container-inner clearfix">
-			<div class="ly-footer-login"> <dnn:login id="DnnLogin" cssclass="ly-login hidden-xs" runat="server" /></div>
 			
             <ul class="ly-footer-address clearfix" itemscope itemtype="http://schema.org/LocalBusiness">
 				<li>
-					<strong itemprop="name">Limodor Service AG</strong> | 
+					<strong itemprop="name">LIMODOR Service AG</strong> | 
 				</li>
 				<li>
 					<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
@@ -100,17 +101,19 @@
 						<span itemprop="addressCountry">Schweiz</span>
 					</span>
 				</li>
-                <li></span><a href="tel:00423235050">Tel: 00423 239 50 50</a> |</li>
+                <li></span><a href="tel:0041813023313">Tel: +41 81 302 33 13</a> |</li>
 				<li>
 					<span data-madr1="info" data-madr2="limodor-service" data-madr3="com" data-linktext="info@limodor-service.com"></span>
 				</li>
             </ul>
             <div class="ly-footer-imprint">
                
-                <a href="<%# LocalizeString("Medien.Url") %>" title="Medien"><%# LocalizeString("Medien.Text") %></a> | <a href="<%# LocalizeString("Imprint.Url") %>" title="Impressum"><%# LocalizeString("Imprint.Text") %></a>
+                <a href="<%# LocalizeString("Medien.Url") %>" title="Medien"><%# LocalizeString("Medien.Text") %></a> | <a href="<%# LocalizeString("Imprint.Url") %>" title="Impressum"><%# LocalizeString("Imprint.Text") %> | <a href="<%# LocalizeString("Data.Url") %>" title="Datenschutzerklärung"><%# LocalizeString("Data.Text") %></a>
             </div>
 			<div class="ly-logo-minergie">			
 						<img alt="Minergie Member" src="<%#SkinPath%>images/logo-minergie.png" />
+						<div class="ly-footer-login"> <dnn:login id="DnnLogin" cssclass="ly-login hidden-xs" runat="server" /></div>
+
 			</div>
 			
         </div>

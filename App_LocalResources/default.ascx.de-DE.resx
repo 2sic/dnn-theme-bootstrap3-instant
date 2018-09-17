@@ -120,6 +120,12 @@
   <data name="CloseNav.Text" xml:space="preserve">
     <value>schliessen</value>
   </data>
+  <data name="Data.Text" xml:space="preserve">
+    <value>Datenschutzerklärung</value>
+  </data>
+  <data name="Data.Url" xml:space="preserve">
+    <value>/datenschutzerklaerung</value>
+  </data>
   <data name="Imprint.Text" xml:space="preserve">
     <value>AGB &amp; Impressum</value>
   </data>
