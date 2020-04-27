@@ -1,26 +1,31 @@
 @import "variables";
 @import "../variables-2sic";
 
-@media all {	
-    /*#region Layout*/
-    /* Layout padding cannot be set on .container-fluid because of IE8 bug with max-width, padding and box-sizing:border-box. */
-	html { 
-		height:100%;
+@media all {
+
+	/*#region Layout*/
+	/* Layout padding cannot be set on .container-fluid because of IE8 bug with max-width, padding and box-sizing:border-box. */
+	html {
+		height: 100%;
 	}
-	body { 
+
+	body {
 		overflow-y: scroll;
-		min-height:100%;
+		min-height: 100%;
 		height: auto;
 	}
-    .container-fluid {
-		max-width:1200px;
+
+	.container-fluid {
+		max-width: 1200px;
 		padding-left: $grid-gutter-width/2;
 		padding-right: $grid-gutter-width/2;
-		@media(min-width: $screen-sm-min){
+
+		@media(min-width: $screen-sm-min) {
 			padding-left: $grid-gutter-width*1.5;
 			padding-right: $grid-gutter-width*1.5;
 		}
 	}
+
 	.ly-overlay {
 		display: none;
 		position: fixed;
@@ -28,36 +33,53 @@
 		width: 100%;
 		top: 0;
 		left: 0;
-		background-color: rgba(63, 140, 132,0.8);
+		background-color: rgba(175, 202, 11, 0.8);
 		z-index: 2000;
 	}
 
 	.ly-button {
 		display: block;
-		width:160px;
+		width: 160px;
 		height: auto;
-		margin-top:20px;
-        img {
-            width:100%;
+		margin-top: 20px;
+		border-radius: 50%;
+		background: #337ab7;
+		overflow: hidden;
+
+		img {
+			width: 100%;
 			height: auto;
-        }
-    }
-	
+			border-radius: 50%;
+			transition: opacity .3s;
+			backface-visibility: hidden;
+			-webkit-box-shadow: 8px 8px 15px 0px rgba(0, 0, 0, 0.3);
+			-moz-box-shadow: 8px 8px 15px 0px rgba(0, 0, 0, 0.3);
+			box-shadow: 8px 8px 15px 0px rgba(0, 0, 0, 0.3);
+		}
+
+		&:hover {
+			img {
+				opacity: .4;
+			}
+		}
+	}
+
 	#content {
-		.container-fluid.ly-content { 
-			min-height:370px;
+		.container-fluid.ly-content {
+			min-height: 370px;
 			padding-top: $grid-gutter-width;
 			padding-bottom: $grid-gutter-width*2;
 			background: #fff;
 		}
 	}
-	
+
 	.ly-welcome-text {
 		text-align: center;
 
-		> a {
-			 text-decoration: underline; 
+		>a {
+			text-decoration: underline;
 		}
 	}
+
 	/*#endregion*/
 }

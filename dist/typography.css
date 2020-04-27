@@ -45,14 +45,20 @@
     text-decoration: none;
     color: #1a1a1a; }
   a:hover {
-    color: #3f8c84;
+    color: #AFCA0B;
     text-decoration: underline; }
+  .ly-col-contentpane a, .ly-col-contentpane a:visited {
+    text-decoration: none;
+    color: #AFCA0B; }
+  .ly-col-contentpane a:hover {
+    color: #555555;
+    text-decoration: none; }
   .co-link {
-    color: #1a1a1a;
+    color: #AFCA0B;
     text-decoration: none; }
     .co-link:hover {
-      text-decoration: underline;
-      color: #3f8c84; }
+      text-decoration: none;
+      color: #555555; }
   .co-p {
     margin: 0 0 14px; }
   /* use this class for templates should have space to the bottom */

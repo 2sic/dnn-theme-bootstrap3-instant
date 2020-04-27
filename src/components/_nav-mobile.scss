@@ -120,7 +120,7 @@
     .ly-nav-mobile {
         margin: ($grid-gutter-width / 2) 0;
         margin-top: 80px;
-        border-top: 2px solid rgba(63, 140, 132, 1.0);
+        border-top: 2px solid rgba(175, 202, 11, 1.0);
         font-size: $font-size-base;
         &,
         ul {
@@ -149,11 +149,11 @@
             }
             &.active>.ly-linkwrapper>a,
             >.ly-linkwrapper>a:hover {
-                color: rgba(63, 140, 132, 1.0);
+                color: rgba(175, 202, 11, 1.0);
             }
             /* mobilenavigation level 2 */
             >ul {
-                background-color: rgba(63, 140, 132, 0.4);
+                background-color: rgba(175, 202, 11, 0.4);
                 display: none;
                 >li {
                     border-bottom: 1px solid #FFF;
@@ -169,7 +169,7 @@
                     }
                     &.active>.ly-linkwrapper>a,
                     >.ly-linkwrapper>a:hover {
-                        color: rgba(63, 140, 132, 1.0);
+                        color: rgba(175, 202, 11, 1.0);
                     }
                     /* mobilenavigation level 3 */
                     >ul {
@@ -183,7 +183,7 @@
                             }
                             &.active>.ly-linkwrapper>a,
                             >.ly-linkwrapper>a:hover {
-                                color: rgba(63, 140, 132, 1.0);
+                                color: rgba(175, 202, 11, 1.0);
                             }
                             /* mobilenavigation level 3 */
                             >ul {
@@ -196,7 +196,7 @@
                                     }
                                     &.active>.ly-linkwrapper>a,
                                     >.ly-linkwrapper>a:hover {
-                                        color: rgba(63, 140, 132, 1.0);
+                                        color: rgba(175, 202, 11, 1.0);
                                     }
                                     /* mobilenavigation level 4+ */
                                     ul {
@@ -209,7 +209,7 @@
                                             }
                                             &.active .ly-linkwrapper a,
                                             .ly-linkwrapper a:hover {
-                                                color: rgba(63, 140, 132, 0.4);
+                                                color: rgba(175, 202, 11, 0.4);
                                             }
                                         }
                                     }
@@ -226,7 +226,7 @@
         .ly-navopener {
             padding: 17px;
             display: inline-block;
-            background: rgba(63, 140, 132, 0.4);
+            background: rgba(175, 202, 11, 0.4);
             z-index: 2000;
             ;
             position: absolute;

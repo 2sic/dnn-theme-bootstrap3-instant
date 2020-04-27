@@ -57,12 +57,20 @@
 		text-decoration: $tosic-link-decoration; color: $link-color;
 	}
 	a:hover { color:$link-hover-color; text-decoration: $link-hover-decoration; }
+
+	.ly-col-contentpane {
+		a, a:visited {
+			text-decoration: $tosic-link-decoration; color: $brand-primary;
+		}
+		a:hover { color:$gray; text-decoration: none; }
+	
+	}
 	.co-link {
-		color: $link-color;
-		text-decoration: $tosic-link-decoration;
+		color: $brand-primary;
+		text-decoration: none;
 		&:hover {
-			text-decoration: $link-hover-decoration;
-			color: $link-hover-color;
+			text-decoration: none;
+			color: $gray;
 		}
 	}
 	.co-p {
