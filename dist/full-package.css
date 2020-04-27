@@ -5905,7 +5905,8 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
   body {
     overflow-y: scroll;
     min-height: 100%;
-    height: auto; }
+    height: auto;
+    padding: 100px 0 0 0; }
   .container-fluid {
     max-width: 1200px;
     padding-left: 15px;
@@ -5958,9 +5959,28 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
 /* Custom 2sic variables */
 /* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
 @media all {
-  /*#region Header (and Main Navigation) */
+  .role-admin header {
+    margin-top: 54px; }
   header {
-    background: #fff; }
+    background: #fff;
+    position: relative;
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    transition: height 0.4s ease-in-out, box-shadow 0.4s ease-in-out; }
+    header.fixed-header {
+      height: 80px;
+      -webkit-box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.53);
+      -moz-box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.53);
+      box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.53); }
+      header.fixed-header .ly-logo {
+        width: 130px; }
+        header.fixed-header .ly-logo svg {
+          /* If you use an SVG as Logo, you will have to give it a fixed height
+					   in this selector, orelse you may experience issues in IE */
+          height: auto; }
     header .container-fluid {
       padding-top: 20px;
       padding-bottom: 0px; } }
@@ -5979,23 +5999,27 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
       width: 214px;
       max-width: 100%;
       height: auto; }
+    .ly-logo svg {
+      /* If you use an SVG as Logo, you will have to give it a fixed height
+			   in this selector, orelse you may experience issues in IE */ }
   .ly-header-pane {
-    padding: 0; }
-  /*#endregion*/ }
+    padding: 0; } }
 
 /* Custom 2sic variables */
 /* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
 @media all {
   #nav-desktop {
-    margin: 3px 0 0 0;
-    float: right; }
+    margin: 0;
+    margin-top: 5px;
+    float: right;
+    transition: margin .4s; }
   /* Reset for all Navigations */
   .ly-nav, .ly-nav ul, .ly-nav li {
     margin: 0;
     padding: 0; }
-  /* Main Navigation */
-  .ly-nav-main li a {
+  .navbar-default .ly-nav-main li a {
     text-decoration: none;
+    color: #555555;
     border-radius: 5px;
     font-family: inherit;
     font-size: 18px;
@@ -6044,6 +6068,10 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
     .ly-nav-mobile-trigger {
       display: none; } }
 
+@media all and (min-width: 768px) {
+  .fixed-header .ly-nav-mobile-trigger {
+    margin-top: 0px; } }
+
 @media all {
   a.ly-close,
   a.ly-close:link,
@@ -6071,7 +6099,8 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
     display: block;
     position: fixed;
     top: 0;
-    height: 100%;
+    height: 100vh;
+    min-height: 100vh;
     z-index: 999999;
     width: 80%;
     max-width: 480px;
@@ -6110,6 +6139,29 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
   .ly-disablescroll .sidr {
     box-shadow: 15px 0 50px rgba(0, 0, 0, 0.55); }
   /*#endregion*/
+  .ly-header-mobile {
+    background: #FFF;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    max-width: 480px;
+    z-index: 50;
+    height: 65px;
+    -webkit-box-shadow: 0px 9px 20px -4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 9px 20px -4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 9px 20px -4px rgba(0, 0, 0, 0.3); }
+    .ly-header-mobile .container-fluid {
+      padding-left: 15px;
+      padding-right: 25px; }
+    .ly-header-mobile .ly-logo {
+      display: block;
+      width: 120px; }
+      .ly-header-mobile .ly-logo img {
+        width: 100%;
+        max-width: 100%;
+        height: auto; }
+      .ly-header-mobile .ly-logo svg {
+        max-height: 54px; }
   /* Region Mobile Navigation (in Sidr) */
   .ly-nav-mobile {
     margin: 15px 0;
@@ -6159,13 +6211,17 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
           .ly-nav-mobile > li > ul > li > .ly-linkwrapper > a:hover {
             color: #afca0b; }
           .ly-nav-mobile > li > ul > li > ul {
-            padding-bottom: 15px; }
+            display: none;
+            background: rgba(0, 0, 0, 0.3); }
             .ly-nav-mobile > li > ul > li > ul > li {
+              border-bottom: 1px solid rgba(0, 0, 0, 0.2);
               /* mobilenavigation level 3 */ }
+              .ly-nav-mobile > li > ul > li > ul > li.last {
+                border-bottom: none; }
               .ly-nav-mobile > li > ul > li > ul > li > .ly-linkwrapper > a {
                 color: #555555;
                 display: block;
-                padding: 4px 10px 4px 40px;
+                padding: 10px 10px 10px 30px;
                 font-size: 0.85em; }
               .ly-nav-mobile > li > ul > li > ul > li.active > .ly-linkwrapper > a,
               .ly-nav-mobile > li > ul > li > ul > li > .ly-linkwrapper > a:hover {
@@ -6214,6 +6270,47 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
       border-left: 4px solid transparent;
       border-right: 4px solid transparent; }
   /*#endregion*/ }
+
+@media all and (min-width: 768px) {
+  .fixed-header #nav-icon {
+    margin: 10px auto; } }
+
+@media all {
+  #nav-icon {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer; } }
+  @media all and (min-width: 768px) {
+    #nav-icon {
+      margin: 20px auto; } }
+
+@media all {
+  #nav-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #5C4483;
+    border-radius: 2px;
+    opacity: 1;
+    left: 0; }
+  #nav-icon span:nth-child(1) {
+    top: 0px; }
+  #nav-icon span:nth-child(2) {
+    top: 8px; }
+  #nav-icon span:nth-child(3) {
+    top: 16px; }
+  .ly-overlay {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(92, 68, 131, 0.6);
+    z-index: 2000; } }
 
 @media all {
   /*#region Sub Navigation */
@@ -6297,21 +6394,44 @@ a.btn.btn:link, a.btn.btn:visited, a.btn.btn:hover {
 @media all {
   a.ly-top {
     position: fixed;
-    bottom: 30px;
-    right: 7px;
+    bottom: 20px;
+    right: 25px;
+    background-color: #5C4483;
+    color: #ffffff;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    -webkit-transition: .3s;
+    transition: .3s;
+    cursor: pointer;
+    vertical-align: middle;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
     font-size: 35px;
     opacity: 0;
     z-index: 100;
-    color: #222222;
+    text-align: center;
     transition: opacity 0.5s;
-    pointer-events: none; } }
+    pointer-events: none; }
+    a.ly-top i {
+      border: solid #ffffff;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 5px;
+      transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
+      vertical-align: middle;
+      margin-left: -1px; } }
   @media all and (min-width: 768px) {
     a.ly-top {
       display: none !important; } }
 
 @media all {
   .ly-top.ly-top-visible {
-    opacity: .72;
+    opacity: 1;
     pointer-events: auto; } }
 
 @media all {
@@ -6505,6 +6625,8 @@ td.DCC_EF_FieldCaptionStyle,
     background: transparent; }
     body.va-layout-box header .container-fluid {
       background: #fff; }
+    body.va-layout-box header.fixed-header {
+      box-shadow: none; }
   body.va-layout-box .ly-header-pane {
     margin-top: 0;
     background: #fff; }
@@ -6518,7 +6640,8 @@ td.DCC_EF_FieldCaptionStyle,
 @media all {
   /*layout wide*/
   body.va-layout-wide {
-    background-color: #fff; }
+    background-color: #ECEFF1;
+    margin-bottom: 40px; }
     body.va-layout-wide .ly-header-pane {
       margin-top: 0;
       /* only one module in headerpane -> bugs in dnn-sortable (moving modules in panes with drag and drop) */ } }
@@ -6541,7 +6664,7 @@ td.DCC_EF_FieldCaptionStyle,
         height: 0; } }
   @media all and (min-width: 1450px) {
     body.va-layout-wide.tab-home .ly-header-pane {
-      margin-bottom: -100px; } }
+      margin-bottom: -200px; } }
 
 @media all {
     body.va-layout-wide .ly-header-pane-empty .ly-container-inner {
@@ -6553,7 +6676,8 @@ td.DCC_EF_FieldCaptionStyle,
 
 @media all {
     body.va-layout-wide #content .container-fluid.ly-content {
-      position: relative; }
+      position: relative;
+      z-index: 11; }
     body.va-layout-wide .ly-fullwrapper .ly-push {
       display: none; } }
 
@@ -6562,6 +6686,7 @@ td.DCC_EF_FieldCaptionStyle,
 @media all {
   /*layout full*/
   body.va-layout-full {
+    background-image: none;
     /* Sticky Footer */
     height: 100%; }
     body.va-layout-full header {
@@ -6575,7 +6700,8 @@ td.DCC_EF_FieldCaptionStyle,
         max-width: 100%; }
         body.va-layout-full .ly-header-pane.container-fluid .ly-container-inner {
           max-width: 1920px;
-          margin: 0 auto; }
+          margin: 0 auto;
+          overflow: hidden; }
     body.va-layout-full #content .container-fluid.ly-content {
       position: relative; }
     body.va-layout-full #content .container-fluid.ly-content {
@@ -6603,29 +6729,63 @@ td.DCC_EF_FieldCaptionStyle,
     float: left; }
   /* Logo right */
   body.va-mainnav-right .ly-logo {
-    float: left; }
+    float: right; } }
+  @media all and (min-width: 992px) {
+    body.va-mainnav-right .ly-logo {
+      float: left; } }
+
+@media all {
   body.va-mainnav-right #nav-desktop {
     float: right; }
   /* header centered */
+  body.va-mainnav-center.fixed {
+    height: 65px; } }
+  @media all and (min-width: 768px) {
+    body.va-mainnav-center.fixed {
+      height: 120px;
+      margin-top: 120px; } }
+
+@media all {
+  body.va-mainnav-center header {
+    height: 65px; } }
+  @media all and (min-width: 768px) {
+    body.va-mainnav-center header {
+      height: auto; } }
+
+@media all {
+    body.va-mainnav-center header.fixed-header {
+      height: 120px; }
+      body.va-mainnav-center header.fixed-header .container-fluid {
+        max-height: 200px; }
+    body.va-mainnav-center header .container-fluid {
+      height: auto !important;
+      padding-bottom: 10px !important; } }
+    @media all and (min-width: 992px) {
+      body.va-mainnav-center header .container-fluid {
+        padding-bottom: 0px !important; } }
+
+@media all {
   body.va-mainnav-center .ly-logo {
     display: block;
     margin: 0 auto;
     text-align: center; }
+  body.va-mainnav-center .ly-header-mobile .ly-logo {
+    margin: 0;
+    text-align: right;
+    display: inline;
+    float: right; }
   body.va-mainnav-center #nav-desktop {
     float: none;
-    margin: 30px 0 15px 0;
+    margin: 15px 0 0 0;
     text-align: center; }
     body.va-mainnav-center #nav-desktop .navbar-nav {
       float: none; }
       body.va-mainnav-center #nav-desktop .navbar-nav li {
         display: inline-block;
-        float: none; } }
-
-@media all and (min-width: 992px) {
-  body.va-mainnav-center .ly-contentpane-full .co-content-text-only {
-    width: 90%; } }
-
-@media all {
+        float: none; }
+        body.va-mainnav-center #nav-desktop .navbar-nav li a:after {
+          content: " ";
+          bottom: -2px; }
   body.va-mainnav-center .co-navigation {
     text-align: center; }
   /* special combine rules */
@@ -6707,7 +6867,7 @@ td.DCC_EF_FieldCaptionStyle,
 /* Custom 2sic variables */
 /* use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
 @media all {
-  /*#region DNN Overrides and default styles (do not change) */
+  /*DNN Overrides and default styles (do not change) */
   /* box-sizing Fixes for DNN components, 3dr party plugins, modules */
   #ControlBar_ControlPanel * {
     box-sizing: content-box; }

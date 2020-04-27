@@ -21,7 +21,7 @@ $(function() {
 	},
 	    onClose: function () { $("body").removeClass("ly-disablescroll");$('.ly-overlay').fadeOut(200); }
 	});
-	
+		
 	/* More responsiveness by using touchstart */
 	$('.ly-nav-mobile-trigger').on("touchstart", function(e){
 		e.preventDefault();
@@ -46,7 +46,6 @@ $(function() {
 
 	/* Mobile Navigation */
     $('#nav-main-offcanvas .ly-navopener').click(function () {
-		console.log('hw');
         $(this).parent().parent().toggleClass('ly-active').find('ul:first').slideToggle();
     });
 
@@ -90,12 +89,35 @@ $(function() {
             scrollTop: 0
         }, 1200, 'easeOutExpo');
         return false;
-    });
-});
-$(window).scroll(function() {
-	if($(this).scrollTop() > 200) {
-		$('.ly-top').addClass('ly-top-visible');    
-	} else {
-		$('.ly-top').removeClass('ly-top-visible');
+	});
+	
+	// Check if DNN < 9
+	if ($("body.role-admin").length > 0) {
+		if ($(".personalBarContainer").length > 0) {
+			$("header").css("margin-top", "0");
+		}
 	}
+
+	$(window).scroll(function() {
+		if($(this).scrollTop() > 200) {
+			$('.ly-top').addClass('ly-top-visible');    
+		} else {
+			$('.ly-top').removeClass('ly-top-visible');
+		}
+	});
+	
+	// Sticky header
+	$(window).scroll(function(){
+		if ($(window).scrollTop() >= 1) {
+			$('header').addClass('fixed-header');
+			$('body').addClass('fixed');
+			
+		}
+		else {
+		   $('header').removeClass('fixed-header');
+			$('body').removeClass('fixed');
+		}
+	});	
 });
+
+

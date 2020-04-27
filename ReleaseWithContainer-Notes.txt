@@ -1,0 +1,29 @@
+<package ame="dnn-container-invisible" type="Skin" version="3.0.2">
+      <friendlyName>HammerFlex</friendlyName>
+      <description>Containers for the HammerFlex Skin package.</description>
+      <owner>
+        <name>Chris Hammond</name>
+        <organization>Christoc.com</organization>
+        <url>http://www.christoc.com</url>
+        <email>skins@christoc.com</email>
+      </owner>
+      <license src="license.txt"></license>
+      <releaseNotes src="releasenotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">07.01.00</dependency>
+      </dependencies>
+      <components>
+        <component type="Container">
+          <containerFiles>
+            <containerName>HammerFlex</containerName>
+            <basepath/>
+            <containerFile>
+              <name>Main.ascx</name>
+            </containerFile>
+            <containerFile>
+              <name>Blank.ascx</name>
+            </containerFile>
+          </containerFiles>
+        </component>
+      </components>
+    </package>
