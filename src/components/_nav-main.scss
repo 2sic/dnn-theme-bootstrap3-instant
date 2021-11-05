@@ -9,6 +9,10 @@
         float: right;
 
         transition: margin .4s;
+
+        .navbar-nav {
+            display: block;
+        }
     }
 
 	/* Reset for all Navigations */
@@ -27,7 +31,7 @@
                 color: $text-color;
                 border-radius: 5px;
                 font-family: $headings-font-family;
-                font-size: floor($font-size-base * 1.13);
+                font-size: $font-size-base;
                 margin: 0 0 0 5px;
                 padding: 10px $grid-gutter-width/2; 
                 border: 0px solid transparent;
@@ -76,6 +80,31 @@
     .fixed-header {
         #nav-desktop {
             margin-top: -4px;
+        }
+    }
+
+    /* Language Selection Styling */
+    .ly-language {
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+        font-size: 12px;
+        margin-top: 0;
+        margin-right: 0;
+        padding-right: 0;
+
+        >li {
+          display: inline-block;
+          padding-right: 5px;
+
+          &:last-child {
+            padding-right: 0;
+          }
+
+          a {
+            color: $brand-primary;
+            text-decoration: none;
+          }
         }
     }
 }
